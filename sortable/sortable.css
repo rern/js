@@ -47,38 +47,8 @@
 .sortable th,
 .sortable td {
 	padding: 0 3px;
-	text-align: right;
 }
 
-.sortable th:nth-child(5),
-.sortable td:nth-child(5) {
-	text-align: left;
-}
-/* reponsive ------------------------------------------------------------------------------------------------------------------------------------- */
-.sortable td:nth-child(6) {
-	min-width: 60px;
-}
-@media(max-width: 569px) {
-	.sortable td:nth-child(4) {
-		display: none !important;
-	}
-	.sortable td:nth-child(5) {
-		max-width: 300px;
-	}
-}
-@media(max-width: 415px) {
-	.sortable td:nth-child(3) {
-		display: none !important;
-	}
-	.sortable td:nth-child(5) {
-		max-width: 230px;
-	}
-}
-@media(max-width: 320px) {
-	.sortable td:nth-child(5) {
-		max-width: 150px;
-	}
-}
 @media(min-height: 415px) {
 	.sortable th {
 		border: 0;
