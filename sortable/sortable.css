@@ -49,12 +49,40 @@
 	padding: 0 3px;
 }
 
-/* column with 'max-width' > next colunmn 'min-width' may required to fix no space for sort icon -  */
+/* reponsive ------------------------------------------------------------------------------------------------------------------------------------- */
+@media(max-width: 569px) {
+	.sortable td:nth-child(4) {
+			/* hide column */
+/*		display: none !important; */
+	}
+	.sortable td:nth-child(5) {
+			/* reset to yeild 'max-width' */
+/*		min-width: 0; */
+			/* ellipsis column */
+/*		max-width: 300px; */
+	}
+}
+@media(max-width: 415px) {
+	.sortable td:nth-child(3) {
+/*		display: none !important; */
+	}
+	.sortable td:nth-child(5) {
+/*		min-width: 0; */
+/*		max-width: 230px; */
+	}
+}
+@media(max-width: 320px) {
+	.sortable td:nth-child(5) {
+/*		min-width: 0; */
+/*		max-width: 150px; */
+	}
+}
 @media(min-height: 415px) {
 	.sortable th {
 		border: 0;
 	}
 }
+
 /* SHOULD NOT change below this line ------------------------------------------------------------------------------------------- */
 .sortableth2 a,
 .sortable th,
@@ -123,5 +151,6 @@ body {
 	-webkit-overflow-scrolling: touch; /* ios momentum scroll */
 }
 .sortable .tdpad {
-	width: 50% /* oversize for centering table */
+	width: 50%; /* oversize for centering table */
+	margin: 0;
 }
