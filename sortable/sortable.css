@@ -49,6 +49,7 @@
 	padding: 0 3px;
 }
 
+/* column with 'max-width' > next colunmn 'min-width' may required to fix no space for sort icon -  */
 @media(min-height: 415px) {
 	.sortable th {
 		border: 0;
