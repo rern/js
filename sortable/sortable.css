@@ -56,32 +56,32 @@
 /*	.sortable th:nth-child(2), .sortable td:nth-child(2) {display: none !important;}*/
 }
 @media(max-width: 480px) {
-	.sortable th:nth-child(5), .sortable td:nth-child(5) {min-width: 0 !important; max-width: 100px;}
+/*	.sortable th:nth-child(5), .sortable td:nth-child(5) {min-width: 0 !important; max-width: 100px;}
 	.sortable th:nth-child(6), .sortable td:nth-child(6) {min-width: 0 !important; max-width: 150px;}
-	.sortable th:nth-child(7), .sortable td:nth-child(7) {min-width: 0 !important; max-width: 1580px;}
+	.sortable th:nth-child(7), .sortable td:nth-child(7) {min-width: 0 !important; max-width: 1580px;}*/
 }
 @media(max-width: 414px) {
-	.sortable th:nth-child(2), .sortable td:nth-child(2) {display: none !important;}
+/*	.sortable th:nth-child(2), .sortable td:nth-child(2) {display: none !important;}
 	.sortable th:nth-child(5), .sortable td:nth-child(5) {min-width: 0 !important; max-width: 90px;}
 	.sortable th:nth-child(6), .sortable td:nth-child(6) {min-width: 0 !important; max-width: 120px;}
-	.sortable th:nth-child(7), .sortable td:nth-child(7) {min-width: 0 !important; max-width: 90px;}
+	.sortable th:nth-child(7), .sortable td:nth-child(7) {min-width: 0 !important; max-width: 90px;}*/
 }
 @media(max-width: 360px) {
-	.sortable th:nth-child(5), .sortable td:nth-child(5) {min-width: 0 !important; max-width: 90px;}
+/*	.sortable th:nth-child(5), .sortable td:nth-child(5) {min-width: 0 !important; max-width: 90px;}
 	.sortable th:nth-child(6), .sortable td:nth-child(6) {min-width: 0 !important; max-width: 95px;}
-	.sortable th:nth-child(7), .sortable td:nth-child(7) {min-width: 0 !important; max-width: 70px;}
+	.sortable th:nth-child(7), .sortable td:nth-child(7) {min-width: 0 !important; max-width: 70px;}*/
 }
 @media(max-width: 320px) {
-	.sortable th:nth-child(5), .sortable td:nth-child(5) {min-width: 0 !important; max-width: 90px;}
+/*	.sortable th:nth-child(5), .sortable td:nth-child(5) {min-width: 0 !important; max-width: 90px;}
 	.sortable th:nth-child(6), .sortable td:nth-child(6) {min-width: 0 !important; max-width: 80px;}
-	.sortable th:nth-child(7), .sortable td:nth-child(7) {min-width: 0 !important; max-width: 50px;}
+	.sortable th:nth-child(7), .sortable td:nth-child(7) {min-width: 0 !important; max-width: 50px;}*/
 }
 
 
 @media(min-height: 415px) {
-	.sortable th {
+/*	.sortable th {
 		border: 0;
-	}
+	}*/
 }
 
 /* SHOULD NOT change below this line ------------------------------------------------------------------------------------------- */
