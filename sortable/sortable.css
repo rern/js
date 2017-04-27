@@ -153,5 +153,5 @@ body {
 }
 .sortable .tdpad {
 	width: 50%; /* oversize for centering table */
-	margin: 0;
+	padding: 0;
 }
