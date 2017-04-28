@@ -4,10 +4,10 @@
 html file extension must be '.php'
 usage:
 	<?php
-	$phpArray = array(
-		array('th0', 'th1', 'th2', 'th3'), // 1st row for header
-		array('td00', 'td01', 'td02', 'td03'),
-		array('td10', 'td11', 'td12', 'td13'),
+	$phpArray = array( // hidden '1st column index' for sorting
+		array(0, 'th0', 'th1', 'th2', 'th3'), // 1st row for header
+		array(0, 'td00', 'td01', 'td02', 'td03'),
+		array(1, 'td10', 'td11', 'td12', 'td13'),
 	);
 	?>
 	...
