@@ -4,40 +4,44 @@
 html file extension must be '.php'
 usage:
 	<?php
-	$phpArray = array( // hidden '1st column index' for sorting
-		array(0, 'th0', 'th1', 'th2', 'th3'), // 1st row for header
-		array(0, 'td00', 'td01', 'td02', 'td03'),
-		array(1, 'td10', 'td11', 'td12', 'td13'),
+	$phpArray = array(
+		array('td00', 'td01', 'td02', 'td03'),
+		array('td10', 'td11', 'td12', 'td13'),
 	);
 	?>
 	...
 	<script>
 	var tableArray = <?php echo json_encode($phpArray) ;?>;
-	var table = array2table(tableArray[, setTableId, setTableClass]);
+	var theadArray = ['th0', 'th1', 'th2', 'th3'];
+	var table = array2table( tbodyArray[, theadArray, 'tableId', 'tableClass'] );
 	$('body script:first').before(table);
 */
-function array2table(ar, id, cl) {
+function array2table(ar, thd, id, cl) { // array2table( tbodyArray[, theadArray, 'tableId', 'tableClass'] )
 	var id = (id == null) ? '' : ' id="'+ id +'"';
 	var cl = (cl == null) ? '' : ' class="'+ cl +'"';
-	var thead = '';
-	var tbody = '';
+	// 'thead'
+	if (thd == null) {
+		var thead = '';
+	} else {
+		var th = '';
+		$.each(thd, function(i, cell) {
+			th += '<th>'+ cell +'</th>';
+		});
+		var thead = '<thead>\n<tr>'+ th +'</tr></thead>\n';
+	}
+	// 'tbody'
+	var tr = '';
 	$.each(ar, function(i, row) {
 		var td = '';
-		if (i === 0) {
-			$.each(row, function(j, cell) {
-				if(j > 0) {td += '<th>'+ cell +'</th>';}
-			});
-			thead += '<tr>'+ td +'</tr>\n';
-		} else {
-			$.each(row, function(j, cell) {
-				if(j > 0) {td += '<td>'+ cell +'</td>';}
-			});
-			tbody += '<tr>'+ td +'</tr>\n';
-		}
+		$.each(row, function(j, cell) {
+			td += '<td>'+ cell +'</td>';
+		});
+		tr += '<tr>'+ td +'</tr>\n';
+		arr[i].unshift(i); // add 'tr' index for sorting
 	});
-	return '<table'+ id + cl +'>\n'+
-		'<thead>\n'+ thead +'</thead>\n'+
-		'<tbody>\n'+ tbody +'</tbody>\n'+
-		'</table>'
+	return '<table'+ id + cl +'>\n'
+		+ thead
+		+ '<tbody>\n'+ tr +'</tbody>\n'
+		+ '</table>'
 }
 ```
