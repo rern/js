@@ -77,7 +77,6 @@ if ( settings.divAfterTable ) {
 
 // convert 'tbody' to value-only array [ [i, 'a', 'b', 'c'], [i, 'd', 'e', 'f'] ]
 var arr = [];
-$thtd = $thtr.children(); // without 'tdpad'
 $tbtr.each( function(i) {
 	var tdarr = [i];
 	$(this).find('td').each( function(j) {
