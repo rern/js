@@ -13,10 +13,10 @@ usage:
 	<script>
 	var tableArray = <?php echo json_encode($phpArray) ;?>;
 	var theadArray = ['th0', 'th1', 'th2', 'th3'];
-	var table = array2table( tbodyArray[, theadArray, 'tableId', 'tableClass'] );
+	var table = array2table( tbodyArray, theadArray, 'tableId', 'tableClass' );
 	$('body script:first').before(table);
 */
-function array2table(ar, thd, id, cl) { // array2table( tbodyArray[, theadArray, 'tableId', 'tableClass'] )
+function array2table(ar, thd, id, cl) { // arg: ( tbodyArray[, theadArray, 'setTableId', 'setTableClass'] )
 	var id = (id == null) ? '' : ' id="'+ id +'"';
 	var cl = (cl == null) ? '' : ' class="'+ cl +'"';
 	// 'thead'
