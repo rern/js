@@ -40,9 +40,13 @@ a jquery plugin for `table` with `thead` and `tbody`
 $('tableid').sortable(); 	// without options > full page table
 // or
 $('tableid').sortable({
-	divBeforeTable: 'divbeforeid',	// default: (none) - div before table, enclosed in single div
-	divAfterTable: 'divafterid',	// default: (none) - div after table, enclosed in single div
-	locale: 'code'		// default: 'en' - locale code
+	divBeforeTable: 'divbeforeid'	// default: (none) - div before table, enclosed in single div
+	, divAfterTable: 'divafterid'	// default: (none) - div after table, enclosed in single div
+	, initialSort: 'column#'	// default: (none) - start with 0
+	, initialSortDesc: false	// default: false
+	, locale: 'code'		// default: 'en'   - locale code
+	, negativeSort: [column#]	// default: (none) - column with negative value
+	, tableArray : []		// default: (none) - use table data array directly
 });
 ...
 ```
