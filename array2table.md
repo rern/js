@@ -24,24 +24,24 @@ function array2table( ar, thd, id, cl ) { // arg: ( tbodyArray[, theadArray, 'se
 		var thead = '';
 	} else {
 		var th = '';
-		$.each( thd, function( i, cell ) {
+		thd.forEach( function( cell, i ) {
 			th += '<th>'+ cell +'</th>';
 		});
 		var thead = '<thead>\n<tr>'+ th +'</tr></thead>\n';
 	}
 	// 'tbody'
 	var tr = '';
-	$.each( ar, function( i, row ) {
+	ar.forEach( function( row, i ) {
 		var td = '';
-		$.each( row, function( j, cell ) {
+		row.forEach( function( cell, j ) {
 			td += '<td>'+ cell +'</td>';
 		});
 		tr += '<tr>'+ td +'</tr>\n';
-		arr[ i ].unshift( i ); // add 'tr' index for sorting
+		ar[ i ].unshift( i ); // add 'tr' index to original array for sorting
 	});
 	return '<table'+ id + cl +'>\n'
-		+ thead
-		+ '<tbody>\n'+ tr +'</tbody>\n'
+			+ thead
+			+ '<tbody>\n'+ tr +'</tbody>\n'
 		+ '</table>'
 }
 ```
