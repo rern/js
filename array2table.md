@@ -37,7 +37,7 @@ function array2table( ar, thd, id, cl ) { // arg: ( tbodyArray[, theadArray, 'se
 			td += '<td>'+ cell +'</td>';
 		});
 		tr += '<tr>'+ td +'</tr>\n';
-		ar[ i ].unshift( i ); // add 'tr' index to original array for sorting
+		row.unshift( i ); // add 'tr' index to original array for sorting
 	});
 	return '<table'+ id + cl +'>\n'
 			+ thead
