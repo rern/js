@@ -13,25 +13,32 @@ usage:
 	<script>
 	var tableArray = <?php echo json_encode( $phpArray ) ;?>;
 	var theadArray = ['th0', 'th1', 'th2', 'th3'];
-	var table = array2table( tbodyArray, theadArray, 'tableId', 'tableClass' );
+	var table = array2table( {
+	      tbar:  [tbodyArray]
+	    , thar:  [theadArray]    // default: (none)
+	    , thtag: 'th'            // default: 'td'
+	    , id:    'setTableId'    // default: (none)
+	    , cl:    'setTableClass' // default: (none)
+	} );
 	$('body script:first').before( table );
 */
-function array2table( ar, thd, id, cl ) { // arg: ( tbodyArray[, theadArray, 'setTableId', 'setTableClass'] )
-	var id = ( id == null ) ? '' : ' id="'+ id +'"';
-	var cl = ( cl == null ) ? '' : ' class="'+ cl +'"';
+function array2table( data ) {
+	var thtag =  ( data.thtag == null ) ? 'td' : 'th';
+	var id = ( data.id == null ) ? '' : ' id="'+ data.id +'"';
+	var cl = ( data.cl == null ) ? '' : ' class="'+ data.cl +'"';
 	// 'thead'
-	if ( thd == null ) {
+	if ( data.thar == null ) {
 		var thead = '';
 	} else {
-		var th = '';
-		thd.forEach( function( cell, i ) {
-			th += '<th>'+ cell +'</th>';
+		var td = '';
+		data.thar.forEach( function( cell, i ) {
+			td += '<'+ thtag +'>'+ cell +'</'+ thtag +'>';
 		});
-		var thead = '<thead>\n<tr>'+ th +'</tr></thead>\n';
+		var thead = '<thead>\n<tr>'+ td +'</tr></thead>\n';
 	}
 	// 'tbody'
 	var tr = '';
-	ar.forEach( function( row, i ) {
+	data.tbar.forEach( function( row, i ) {
 		var td = '';
 		row.forEach( function( cell, j ) {
 			td += '<td>'+ cell +'</td>';
