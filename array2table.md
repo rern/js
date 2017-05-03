@@ -31,7 +31,7 @@ function array2table( data ) {
 		var thead = '';
 	} else {
 		var td = '';
-		data.theadArray.forEach( function ( cell, i ) {
+		data.theadArray.forEach( function ( cell ) {
 			td += '<'+ thTag +'>'+ cell +'</'+ thTag +'>';
 		});
 		var thead = '<thead>\n<tr>'+ td +'</tr></thead>\n';
@@ -40,11 +40,11 @@ function array2table( data ) {
 	var tr = '';
 	data.tbodyArray.forEach( function ( row, i ) {
 		var td = '';
-		row.forEach( function ( cell, j ) {
+		row.forEach( function ( cell ) {
 			td += '<td>'+ cell +'</td>';
 		});
 		tr += '<tr>'+ td +'</tr>\n';
-		row.unshift( i ); // add 'tr' index to original array for sorting
+		row.unshift( i ); // add row index to original array for sorting
 	});
 	return '<table'+ setID + setClass +'>\n'
 			+ thead
