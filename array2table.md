@@ -17,14 +17,14 @@ usage:
 	      tbodyArray: [tbarray]
 	    , theadArray: [tharray] // default: (none)
 	    , thTag:      'th'      // default: 'td'
-	    , setId:      'id'      // default: (none)
+	    , setID:      'id'      // default: (none)
 	    , setClass:   'class'   // default: (none)
 	} );
 	$('body script:first').before( table );
 */
 function array2table( data ) {
 	var thTag =  ( data.thTag == null ) ? 'td' : 'th';
-	var setID = ( data.setId == null ) ? '' : ' id="'+ data.setId +'"';
+	var setID = ( data.setID == null ) ? '' : ' id="'+ data.setID +'"';
 	var setClass = ( data.setClass == null ) ? '' : ' class="'+ data.setClass +'"';
 	// 'thead'
 	if ( data.theadArray == null ) {
