@@ -16,9 +16,9 @@ usage:
 	var table = array2table( {
 	      tbodyArray: [tbarray]
 	    , theadArray: [tharray] // default: (none)
-	    , thTag:      'th'    // default: 'td'
-	    , setId:      'id'    // default: (none)
-	    , setClass:   'class' // default: (none)
+	    , thTag:      'th'      // default: 'td'
+	    , setId:      'id'      // default: (none)
+	    , setClass:   'class'   // default: (none)
 	} );
 	$('body script:first').before( table );
 */
