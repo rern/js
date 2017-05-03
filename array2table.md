@@ -23,32 +23,32 @@ usage:
 	$('body script:first').before( table );
 */
 function array2table( data ) {
-	var thtag =  ( data.thTag == null ) ? 'td' : 'th';
-	var setid = ( data.setId == null ) ? '' : ' id="'+ data.setId +'"';
-	var setclass = ( data.setClass == null ) ? '' : ' class="'+ data.setClass +'"';
+	var thTag =  ( data.thTag == null ) ? 'td' : 'th';
+	var setID = ( data.setId == null ) ? '' : ' id="'+ data.setId +'"';
+	var setClass = ( data.setClass == null ) ? '' : ' class="'+ data.setClass +'"';
 	// 'thead'
 	if ( data.theadArray == null ) {
 		var thead = '';
 	} else {
 		var td = '';
-		data.theadArray.forEach( function( cell, i ) {
-			td += '<'+ thtag +'>'+ cell +'</'+ thtag +'>';
+		data.theadArray.forEach( function ( cell, i ) {
+			td += '<'+ thTag +'>'+ cell +'</'+ thTag +'>';
 		});
 		var thead = '<thead>\n<tr>'+ td +'</tr></thead>\n';
 	}
 	// 'tbody'
 	var tr = '';
-	data.tbodyArray.forEach( function( row, i ) {
+	data.tbodyArray.forEach( function ( row, i ) {
 		var td = '';
-		row.forEach( function( cell, j ) {
+		row.forEach( function ( cell, j ) {
 			td += '<td>'+ cell +'</td>';
 		});
 		tr += '<tr>'+ td +'</tr>\n';
 		row.unshift( i ); // add 'tr' index to original array for sorting
 	});
-	return '<table'+ setid + setclass +'>\n'
+	return '<table'+ setID + setClass +'>\n'
 			+ thead
 			+ '<tbody>\n'+ tr +'</tbody>\n'
-		+ '</table>'
+		+ '</table>';
 }
 ```
