@@ -3,15 +3,15 @@ sortable.js
 a jquery plugin for `table` with `thead` and `tbody`  
   
 [**DEMO**](https://rern.github.io/sortable/)  
-- เรียงลำดับภาษาไทยได้  
+- เรียงลำดับภาษาไทยได้ถูกต้อง
 - sortable row
-- highlight sorted column
 - fixed header
 - scrollable body
-- maintain scroll position on screen rotate
 - align center table
-- screen rotate responsive 
 - zebra stripe row
+- highlight sorted column
+- maintain scroll position on screen rotate
+- screen rotate responsive  
   
 **usage:**  
 ```html
@@ -25,8 +25,8 @@ a jquery plugin for `table` with `thead` and `tbody`
 	</div>
 
 	<table id="tableid">
-		<thead><tr><td></td></tr></thead>
-		<tbody><tr><td></td></tr></tbody>
+		<thead><tr><td>cell</td></tr></thead>
+		<tbody><tr><td>cell</td></tr></tbody>
 	</table>
 
 	<div id="divafterid"> <!-- optional -->
@@ -37,10 +37,10 @@ a jquery plugin for `table` with `thead` and `tbody`
 <script src="/path/sortable.js"></script>
 <script>
 ...
-$('tableid').sortable();                 // without options > full page table
+$( 'tableid' ).sortable();                 // without options > full page table
 // or
-$('tableid').sortable( {
-	divBeforeTable:	   'divbeforeid' // default: (none) - div before table, enclosed in single div
+$( 'tableid' ).sortable( {
+	  divBeforeTable:  'divbeforeid' // default: (none) - div before table, enclosed in single div
 	, divAfterTable:   'divafterid'  // default: (none) - div after table, enclosed in single div
 	, initialSort:     'column#'     // default: (none) - start with 0
 	, initialSortDesc: false         // default: false
