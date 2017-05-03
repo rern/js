@@ -11,34 +11,34 @@ usage:
 	?>
 	...
 	<script>
-	var tableArray = <?php echo json_encode( $phpArray ) ;?>;
-	var theadArray = ['th0', 'th1', 'th2', 'th3'];
+	var tbarray = <?php echo json_encode( $phpArray ) ;?>;
+	var tharray = ['th0', 'th1', 'th2', 'th3'];
 	var table = array2table( {
-	      tbar:  [tbodyArray]
-	    , thar:  [theadArray]    // default: (none)
-	    , thtag: 'th'            // default: 'td'
-	    , id:    'setTableId'    // default: (none)
-	    , cl:    'setTableClass' // default: (none)
+	      tbodyArray: [tbarray]
+	    , theadArray: [tharray] // default: (none)
+	    , thTag:      'th'    // default: 'td'
+	    , setId:      'id'    // default: (none)
+	    , setClass:   'class' // default: (none)
 	} );
 	$('body script:first').before( table );
 */
 function array2table( data ) {
-	var thtag =  ( data.thtag == null ) ? 'td' : 'th';
-	var id = ( data.id == null ) ? '' : ' id="'+ data.id +'"';
-	var cl = ( data.cl == null ) ? '' : ' class="'+ data.cl +'"';
+	var thtag =  ( data.thTag == null ) ? 'td' : 'th';
+	var setid = ( data.setId == null ) ? '' : ' id="'+ data.setId +'"';
+	var setclass = ( data.setClass == null ) ? '' : ' class="'+ data.setClass +'"';
 	// 'thead'
-	if ( data.thar == null ) {
+	if ( data.theadArray == null ) {
 		var thead = '';
 	} else {
 		var td = '';
-		data.thar.forEach( function( cell, i ) {
+		data.theadArray.forEach( function( cell, i ) {
 			td += '<'+ thtag +'>'+ cell +'</'+ thtag +'>';
 		});
 		var thead = '<thead>\n<tr>'+ td +'</tr></thead>\n';
 	}
 	// 'tbody'
 	var tr = '';
-	data.tbar.forEach( function( row, i ) {
+	data.tbodyArray.forEach( function( row, i ) {
 		var td = '';
 		row.forEach( function( cell, j ) {
 			td += '<td>'+ cell +'</td>';
@@ -46,7 +46,7 @@ function array2table( data ) {
 		tr += '<tr>'+ td +'</tr>\n';
 		row.unshift( i ); // add 'tr' index to original array for sorting
 	});
-	return '<table'+ id + cl +'>\n'
+	return '<table'+ setid + setclass +'>\n'
 			+ thead
 			+ '<tbody>\n'+ tr +'</tbody>\n'
 		+ '</table>'
