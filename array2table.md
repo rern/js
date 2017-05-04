@@ -1,4 +1,4 @@
-**Convert PHP array to html table**  
+**Convert array to html table**  
 ```js
 /*
 html file extension must be '.php'
@@ -12,6 +12,11 @@ usage:
 	...
 	<script>
 	var tbarray = <?php echo json_encode( $phpArray ) ;?>;
+	// or use js array directly
+	// var tbarray = [
+	//	['td00', 'td01', 'td02', 'td03'],
+	//	['td10', 'td11', 'td12', 'td13']
+	// ];
 	var tharray = ['th0', 'th1', 'th2', 'th3'];
 	var table = array2table( {
 	      tbodyArray: [tbarray]
@@ -21,12 +26,13 @@ usage:
 	    , setClass:   'class'   // default: (none)
 	} );
 	$( 'body script:first' ).before( table );
-	// for custom column css
+	// or for custom column css
 	$( 'body script:first' ).before( table )
 		.find( '#id td:nth-child( 1 )' ) // add repetitive 'td' content / class
 			.html( 'content' )
 			.addClass( 'class1 class2' )
 				//.end().find( '#id' ) // to select the table for other operation
+					//.sortable()
 	;
 */
 function array2table( data ) {
