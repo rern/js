@@ -27,7 +27,7 @@ usage:
 			.html( 'content' )
 			.addClass( 'class1 class2' )
 				//.end().find( '#id' ) // to select the table for other operation
-
+	;
 */
 function array2table( data ) {
 	var thTag =  ( data.thTag == null ) ? 'td' : 'th';
