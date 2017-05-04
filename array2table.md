@@ -3,20 +3,23 @@
 /*
 html file extension must be '.php'
 usage:
+	<!DOCTYPE html>
 	<?php
 	$phpArray = array(
 		array('td00', 'td01', 'td02', 'td03'),
 		array('td10', 'td11', 'td12', 'td13'),
 	);
 	?>
-	...
+	
 	<script>
+	$( function () {
 	var tbarray = <?php echo json_encode( $phpArray ) ;?>;
-	// or use js array directly
-	// var tbarray = [
-	//	['td00', 'td01', 'td02', 'td03'],
-	//	['td10', 'td11', 'td12', 'td13']
-	// ];
+	/* or use js array directly
+	var tbarray = [
+		['td00', 'td01', 'td02', 'td03'],
+		['td10', 'td11', 'td12', 'td13']
+	];
+	*/
 	var tharray = ['th0', 'th1', 'th2', 'th3'];
 	var table = array2table( {
 	      tbodyArray: [tbarray]
@@ -25,15 +28,20 @@ usage:
 	    , setID:      'id'      // default: (none)
 	    , setClass:   'class'   // default: (none)
 	} );
+	
 	$( 'body script:first' ).before( table );
-	// or for custom column css
+	
+	/* or for custom column css
 	$( 'body script:first' ).before( table )
-		.find( '#id td:nth-child( 1 )' ) // add repetitive 'td' content / class
-			.html( 'content' )
-			.addClass( 'class1 class2' )
-				//.end().find( '#id' ) // to select the table for other operation
+		.find( '#id td:nth-child( 1 )' ) // custom column '1'
+			.html( 'content' ) // add repetitive 'td' content
+			.addClass( 'class1 class2' ) // add repetitive 'td' class
+				//.end().find( '#id' ) // to select the table for other chained operation
 					//.sortable()
 	;
+	*/
+	} );
+	</script>
 */
 function array2table( data ) {
 	var thTag =  ( data.thTag == null ) ? 'td' : 'th';
