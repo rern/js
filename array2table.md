@@ -14,12 +14,11 @@ usage:
 	<script>
 	$( function () {
 	var tbarray = <?php echo json_encode( $phpArray ) ;?>;
-	/* or use js array directly
-	var tbarray = [
-		['td00', 'td01', 'td02', 'td03'],
-		['td10', 'td11', 'td12', 'td13']
-	];
-	*/
+	// or use js array directly
+	// var tbarray = [
+	//	['td00', 'td01', 'td02', 'td03'],
+	//	['td10', 'td11', 'td12', 'td13']
+	// ];
 	var tharray = ['th0', 'th1', 'th2', 'th3'];
 	var table = array2table( {
 	      tbodyArray: [tbarray]
@@ -31,7 +30,7 @@ usage:
 	
 	$( 'body script:first' ).before( table );
 	
-	/* or for custom column css
+	// or with custom column
 	$( 'body script:first' ).before( table )
 		.find( '#id td:nth-child( 1 )' ) // custom column '1'
 			.html( 'content' ) // add repetitive 'td' content
@@ -39,7 +38,7 @@ usage:
 				//.end().find( '#id' ) // to select the table for other chained operation
 					//.sortable()
 	;
-	*/
+	
 	} );
 	</script>
 */
