@@ -241,6 +241,7 @@ hostname
 hover
 href
 html
+id
 ignoreCase
 image
 images
