@@ -1,1 +1,1 @@
-document location navigator screen this window
+document JSON location navigator screen window this XMLHttpRequest
