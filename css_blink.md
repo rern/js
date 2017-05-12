@@ -1,0 +1,11 @@
+CSS blink
+---
+
+```css
+.blink {
+    animation: blinker 2s linear infinite;
+}
+@keyframes blinker {  
+    50% { opacity: 0; }
+}
+```
