@@ -1,7 +1,7 @@
 Set up SSL for free
 ---
 
-**1. Get [Let's Encrypt](https://letsencrypt.org/) certificate for free**  
+**1. Get [Let's Encrypt](https://letsencrypt.org/) certificate** (Free)  
 `www.domain.com:2222 > login`  
 `Domain > Advanced Features > SSL Certificates > Free & automatic certificate from Let's Encrypt`  
 
@@ -9,7 +9,7 @@ Set up SSL for free
 `public_html > private_html`  
 
 **3. Redirect**  
-`/.htaccess`
+`.../public_html/.htaccess`
 ```sh
 # redirect non-www > www, http > https
 
