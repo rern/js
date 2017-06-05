@@ -6,7 +6,7 @@ Set up SSL for free
 `Domain > Advanced Features > SSL Certificates > Free & automatic certificate from Let's Encrypt`  
 
 **2. Move directories and files**  
-`public_html > private_html`  
+`.../public_html/*` to `.../private_html/*`  
 
 **3. Add a redirect file**  
 `.../public_html/.htaccess`
