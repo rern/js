@@ -12,4 +12,5 @@ $sourcedir = '/home/path/private_html/forum/Sources';		# Path to the Sources dir
 $cachedir = '/home/path/private_html/forum/cache';		# Path to the cache directory.
 ```
 
-Login > Admin > Theme Settings > Theme Directory: `/homepath/private_html/forum/Themes/rern`
+Login > Admin > Theme Settings > Theme Directory:  
+`/home/path/private_html/forum/Themes/rern`
