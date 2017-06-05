@@ -1,5 +1,6 @@
 SMF with SSL enabled
 ---
+Change `public_html` to `private_html`  
 
 `./Settings.php`   
 ```sh
@@ -13,4 +14,4 @@ $cachedir = '/home/path/private_html/forum/cache';		# Path to the cache director
 ```
 
 Login > Admin > Theme Settings > Theme Directory:  
-`/home/path/private_html/forum/Themes/rern`
+`/home/path/private_html/forum/Themes/name`
