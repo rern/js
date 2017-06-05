@@ -1,7 +1,7 @@
-Set up SSL
+Set up SSL for free
 ---
 
-**1. Get [Let's Encrypt](https://letsencrypt.org/) certificate**  
+**1. Get [Let's Encrypt](https://letsencrypt.org/) certificate for free**  
 `www.domain.com:2222 > login`  
 `Domain > Advanced Features > SSL Certificates > Free & automatic certificate from Let's Encrypt`  
 
