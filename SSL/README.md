@@ -11,10 +11,6 @@ Set up SSL for free
 **3. Add a redirect file**  
 `.../public_html/.htaccess`
 ```sh
-# redirect non-www > www, http > https
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} !^www\.
-RewriteCond %{HTTPS}s on(s)|offs()
-RedirectMatch 301 ^/$ https://www.domain.com
+RedirectMatch 301 ^/$ https://www.domain.com/
+RedirectMatch 301 /subdir https://www.domain.com/subdir
 ```
