@@ -15,5 +15,5 @@ Set up SSL for free
 
 RewriteEngine On 
 RewriteCond %{SERVER_PORT} 80 
-RewriteRule ^(.*)$ https://www.domain.com/$1 [R,L]
+RewriteRule ^(.*)$ https://www.domain.com/$1 [R=301,L]
 ```
