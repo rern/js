@@ -2,6 +2,7 @@ NGINX pushstream - broadcast messages
 ---
 
 **Prepare**  
+- javascript  
 ```js
 // new 'pushstream0'
 var pushstream0 = new PushStream({
@@ -25,14 +26,17 @@ pushstream0.connect();
 ```
 
 **Broadcast**  
-- PHP  
-(after `-d`, double quotes must be escaped)  
+- PHP    
 ```php
+// put data in 'exec()' directly, quotes must be escaped
+
 //string
-exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d \"message\"');
+$data = "message";
+exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d $data');
 
 // json
-exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d \"{'message0':'message'}\"');
+$data = {'message0':'message'};
+exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d $data');
 ```
 
 - Python  
