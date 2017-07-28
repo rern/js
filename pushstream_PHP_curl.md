@@ -26,7 +26,7 @@ pushstream0.connect();
 
 **Broadcast**  
 - PHP  
-symbol in message, after `-d`, must be escaped  
+(after `-d`, double quotes must be escaped)  
 ```php
 //string
 exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d \"message\"');
