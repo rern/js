@@ -28,14 +28,8 @@ pushstream0.connect();
 **Broadcast**  
 - PHP    
 ```php
-// put data in 'exec()' directly, quotes must be escaped
 
-// string
-$broadcast = 'message';
-// or json
-$broadcast = {'message0':'message'};
-
-// broadcast
+$broadcast = '\"message\"'; // 'message' must be quotes must be inside 'escaped double quotes'
 exec("/usr/bin/curl -s -v -X POST 'http://localhost/pub?id=channel0' -d $broadcast");
 ```
 
@@ -44,11 +38,6 @@ exec("/usr/bin/curl -s -v -X POST 'http://localhost/pub?id=channel0' -d $broadca
 # need 'requests' package
 import requests
 
-# string
 broadcast = 'message'
-requests.post('http://localhost/pub?id=channel0', data=broadcast)
-
-# json
-broadcast = {'message0': 'message'}
-requests.post('http://localhost/pub?id=channel0', json=broadcast)
+requests.post('http://localhost/pub?id=channel0', json = broadcast)
 ```
