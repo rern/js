@@ -28,8 +28,6 @@ pushstream0.connect();
 - PHP  
 symbol in message, after `-d`, must be escaped  
 ```php
-<?php
-
 //string
 exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d \"message\"');
 
@@ -39,6 +37,7 @@ exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d \"{'mess
 
 - Python  
 ```python
+# need 'requests' package
 import requests
 
 # string
