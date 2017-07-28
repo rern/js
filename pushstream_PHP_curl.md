@@ -31,7 +31,7 @@ pushstream0.connect();
 // put data in 'exec()' directly, quotes must be escaped
 
 // string
-$data = "message";
+$data = 'message';
 // or json
 $data = {'message0':'message'};
 
