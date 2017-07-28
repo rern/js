@@ -21,7 +21,6 @@ pushstream0.onmessage = function(data) {
 
 // connect 'pushstream0'
 pushstream0.connect();
-[/code]
 ```
 
 **Broadcast**  
