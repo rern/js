@@ -16,8 +16,7 @@ pushstream0.addChannel('channel0');
 
 // on receive from 'pushstream0' broadcast
 pushstream0.onmessage = function(data) {
-	alert(data);          // string -> 'message'
-	alert(data.message0); // json   -> 'message'
+	alert(data); //'message'
 }
 
 // connect 'pushstream0'
