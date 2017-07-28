@@ -30,12 +30,12 @@ pushstream0.connect();
 ```php
 // put data in 'exec()' directly, quotes must be escaped
 
-//string
+// string
 $data = "message";
-exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d $data');
-
-// json
+// or json
 $data = {'message0':'message'};
+
+// broadcast
 exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d $data');
 ```
 
