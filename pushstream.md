@@ -27,7 +27,7 @@ pushstream0.connect();
 **Broadcast**  
 - PHP    
 ```php
-$broadcast = '\"message\"'; // 'message' must be quotes must be inside 'escaped double quotes'
+$broadcast = '\"message\"'; // 'message' must be placed inside 'escaped double quotes'
 exec("/usr/bin/curl -s -v -X POST 'http://localhost/pub?id=channel0' -d $broadcast");
 ```
 
