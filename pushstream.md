@@ -22,7 +22,7 @@ pushstream0.onmessage = function(data) {
 	alert(data); //'message'
 }
 
-// connect 'pushstream0'
+// subscribe 'pushstream0'
 pushstream0.connect();
 ```
 
