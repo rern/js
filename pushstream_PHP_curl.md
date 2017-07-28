@@ -31,12 +31,12 @@ pushstream0.connect();
 // put data in 'exec()' directly, quotes must be escaped
 
 // string
-$data = 'message';
+$broadcast = 'message';
 // or json
-$data = {'message0':'message'};
+$broadcast = {'message0':'message'};
 
 // broadcast
-exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d $data');
+exec("/usr/bin/curl -s -v -X POST 'http://localhost/pub?id=channel0' -d $broadcast");
 ```
 
 - Python  
@@ -45,8 +45,10 @@ exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d $data');
 import requests
 
 # string
-requests.post('http://localhost/pub?id=channel0', data='message')
+broadcast = 'message'
+requests.post('http://localhost/pub?id=channel0', data=broadcast)
 
 # json
-requests.post('http://localhost/pub?id=channel0', json={'message0':'message'})
+broadcast = {'message0': 'message'}
+requests.post('http://localhost/pub?id=channel0', json=broadcast)
 ```
