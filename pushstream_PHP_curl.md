@@ -29,13 +29,21 @@ pushstream0.connect();
 symbol in message, after `-d`, must be escaped  
 ```php
 <?php
+
+//string
 exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d \"message\"');
+
+// json
+exec('/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d \"{'message0':'message'}\"');
 ```
 
 - Python  
 ```python
 import requests
+
+# string
 requests.post('http://localhost/pub?id=channel0', data='message')
 
+# json
 requests.post('http://localhost/pub?id=channel0', json={'message0':'message'})
 ```
