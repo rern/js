@@ -8,18 +8,19 @@ NGINX pushstream - broadcast messages
 - client javascript  
 ```js
 // new 'pushstream0'
-var pushstream0 = new PushStream({
-	host: window.location.hostname,
-	port: window.location.port,
-	modes: GUI.mode
-});
+var pushstream0 = new PushStream( {
+   host: window.location.hostname,
+   port: window.location.port,
+   modes: GUI.mode
+} );
 
 // new channel 'channel0'
-pushstream0.addChannel('channel0');
+pushstream0.addChannel( 'channel0' );
 
 // on receive from 'pushstream0' broadcast
-pushstream0.onmessage = function(data) {
-	alert(data); //'message'
+pushstream0.onmessage = function( data ) {
+   // 'data' is array - 'json' is in data[ 0 ] 
+   alert( data[ 0 ].msg ); // 'message'
 }
 
 // subscribe 'pushstream0'
@@ -27,17 +28,20 @@ pushstream0.connect();
 ```
 
 **Broadcast**  
-- PHP    
-```php
-$broadcast = '\"message\"'; // 'message' must be placed inside 'escaped double quotes'
-exec("/usr/bin/curl -s -v -X POST 'http://localhost/pub?id=channel0' -d $broadcast");
-```
-
 - Python  
 ```python
 # need 'requests' package
 import requests
 
-broadcast = 'message'
-requests.post('http://localhost/pub?id=channel0', json = broadcast)
+requests.post( 'http://localhost/pub?id=channel0', json={ 'msg': 'message' } )
+```
+
+- PHP    
+```php
+exec( '/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d "{\"msg\": \"message\" }"' );
+```
+
+- BASH
+```sh
+curl -s -v -X POST 'http://localhost/pub?id=channel0' -d '{ "msg": "message" }'
 ```
