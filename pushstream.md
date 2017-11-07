@@ -4,10 +4,11 @@ NGINX pushstream - broadcast messages
 
 **Prepare**
 - server  
-	* [setup](https://github.com/wandenberg/nginx-push-stream-module#basic-configuration) pushstream support in `/etc/nginx/nginx/.conf`
-- client javascript  
+	- [NGINX setup](https://github.com/wandenberg/nginx-push-stream-module#basic-configuration) pushstream support in `/etc/nginx/nginx/.conf`
+
+- client (javascript)  
 ```js
-// new 'pushstream0'
+// need 'pushstream.js'
 var pushstream0 = new PushStream( {
    host: window.location.hostname,
    port: window.location.port,
