@@ -39,10 +39,11 @@ requests.post( 'http://localhost/pub?id=channel0', json={ 'msg': 'message' } )
 
 - PHP    
 ```php
-exec( '/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d "{
-	\"msg\": \"message\"
-	}"'
-);
+$ch = curl_init( 'http://localhost/pub?id=channel0' );
+curl_setopt( $ch, CURLOPT_HTTPHEADER, array( 'Content-Type:application/json' ) );
+curl_setopt( $ch, CURLOPT_POSTFIELDS, json_encode( array( 'msg' => 'message' ) ) );
+curl_exec( $ch );
+curl_close( $ch );
 ```
 
 - BASH
