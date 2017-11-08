@@ -10,9 +10,9 @@ NGINX pushstream - broadcast messages
 ```js
 // need 'pushstream.js'
 var pushstream0 = new PushStream( {
-   host: window.location.hostname,
-   port: window.location.port,
-   modes: GUI.mode
+	host: window.location.hostname,
+	port: window.location.port,
+	modes: GUI.mode
 } );
 
 // new channel 'channel0'
@@ -20,8 +20,8 @@ pushstream0.addChannel( 'channel0' );
 
 // on receive from 'pushstream0' broadcast
 pushstream0.onmessage = function( data ) {
-   // 'data' is array - 'json' is in data[ 0 ] 
-   alert( data[ 0 ].msg ); // 'message'
+	// 'data' is array - 'json' is in data[ 0 ] 
+	alert( data[ 0 ].msg ); // 'message'
 }
 
 // subscribe 'pushstream0'
