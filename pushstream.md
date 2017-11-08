@@ -3,10 +3,10 @@ NGINX pushstream - broadcast messages
 [NGINX pushstream](https://github.com/wandenberg/nginx-push-stream-module) - publish / subscribe messages  
 
 **Prepare**
-- server  
+- server side
 	- [NGINX setup](https://github.com/wandenberg/nginx-push-stream-module#basic-configuration) pushstream support in `/etc/nginx/nginx/.conf`
 
-- client (javascript)  
+- client side (javascript)  
 ```js
 // need 'pushstream.js'
 var pushstream0 = new PushStream( {
