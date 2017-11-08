@@ -31,7 +31,7 @@ pushstream0.connect();
 **Broadcast**  
 - Python  
 ```python
-# need 'requests' package
+# need 'requests' pip package
 import requests
 
 requests.post( 'http://localhost/pub?id=channel0', json={ 'msg': 'message' } )
