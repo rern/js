@@ -4,7 +4,7 @@ NGINX pushstream - broadcast messages
 
 **Prepare**
 - server side
-  - NGINX with pushstream (custom compiled)
+	- NGINX with pushstream (custom compiled)
 	- [NGINX setup](https://github.com/wandenberg/nginx-push-stream-module#basic-configuration) pushstream support in `/etc/nginx/nginx/.conf`
 
 - client side (javascript)  
