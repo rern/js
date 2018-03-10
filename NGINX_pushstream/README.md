@@ -31,6 +31,21 @@ pushstream0.connect();
 
 **Broadcast**  
 - Python  
+[_credit:_](https://varunver.wordpress.com/2013/05/20/python-post-json-data-curl-equivalent-in-python-using-urllib2/)
+```python
+import json
+import urllib
+import urllib2
+
+url = 'http://localhost/pub?id=gpio'
+headerdata = { 'Content-type': 'application/json', 'Accept': 'application/json' }
+
+data = { 'msg': 'message' }
+req = urllib2.Request( url, json.dumps( data ), headers = headerdata )
+
+response = urllib2.urlopen( req )
+```
+or
 ```python
 # need 'requests' pip package
 import requests
