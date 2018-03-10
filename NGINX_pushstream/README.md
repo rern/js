@@ -31,7 +31,7 @@ pushstream0.connect();
 
 **Broadcast**  
 - Python  
-[_credit:_](https://varunver.wordpress.com/2013/05/20/python-post-json-data-curl-equivalent-in-python-using-urllib2/)
+credit: [Varun Verma](https://varunver.wordpress.com/2013/05/20/python-post-json-data-curl-equivalent-in-python-using-urllib2/)
 ```python
 import json
 import urllib
