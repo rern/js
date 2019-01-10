@@ -13,7 +13,7 @@ NGINX pushstream - broadcast messages
 var pushstream0 = new PushStream( {
 	host: window.location.hostname,
 	port: window.location.port,
-	modes: GUI.mode
+	modes: 'websocket'
 } );
 
 // new channel 'channel0'
