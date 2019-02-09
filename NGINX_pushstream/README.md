@@ -67,10 +67,10 @@ exec( '/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d "{ \"ms
 ```
 
 **BASH**
-- concat variables inside single quotes '{ "msg": "**'"$message"'**" }'
 ```sh
-# text  : '"'"$message"'"'
+# variables with spaces - defined in double quotes
+# text  : "\"$message"\"
 # json : '{ "msg": "'"$message"'" }'
-# array: '"message1", "message2"'
+# array: '"message1", "'"$message2"'"'
 curl -s -v -X POST 'http://localhost/pub?id=channel0' -d '{ "msg": "'"$message"'" }'
 ```
