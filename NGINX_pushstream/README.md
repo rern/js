@@ -2,12 +2,12 @@ NGINX pushstream - broadcast messages
 ---
 [NGINX pushstream](https://github.com/wandenberg/nginx-push-stream-module) - publish / subscribe messages  
 
-**Prepare**
-- server side
-	- NGINX with pushstream (custom compiled)
-	- [NGINX setup](https://github.com/wandenberg/nginx-push-stream-module#basic-configuration) pushstream support in `/etc/nginx/nginx/.conf`
+## Prepare
+**Server side**
+- NGINX with pushstream (custom compiled)
+- [NGINX setup](https://github.com/wandenberg/nginx-push-stream-module#basic-configuration) pushstream support in `/etc/nginx/nginx/.conf`
 
-- client side (javascript)  
+**Client side** (javascript)  
 ```js
 // need 'pushstream.js'
 var pushstream0 = new PushStream( {
@@ -29,8 +29,8 @@ pushstream0.onmessage = function( data ) {
 pushstream0.connect();
 ```
 
-**Broadcast**  
-- Python  
+## Broadcast
+**Python**
 ```python
 import json
 import urllib
@@ -54,7 +54,7 @@ import requests
 requests.post( 'http://localhost/pub?id=channel0', json={ 'msg': 'message' } )
 ```
 
-- PHP    
+**PHP**
 ```php
 $ch = curl_init( 'http://localhost/pub?id=channel0' );
 curl_setopt( $ch, CURLOPT_HTTPHEADER, array( 'Content-Type:application/json' ) );
@@ -66,9 +66,11 @@ curl_close( $ch );
 exec( '/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d "{ \"msg\": \"message\" }"' );
 ```
 
-- BASH
+**BASH**
+- concat variables inside single quotes '{ "msg": "**'"$message"'**" }'
 ```sh
-# json : '{ "msg": "message" }'
+# text  : '"'"$message"'"'
+# json : '{ "msg": "'"$message"'" }'
 # array: '"message1", "message2"'
-curl -s -v -X POST 'http://localhost/pub?id=channel0' -d '{ "msg": "message" }'
+curl -s -v -X POST 'http://localhost/pub?id=channel0' -d '{ "msg": "'"$message"'" }'
 ```
