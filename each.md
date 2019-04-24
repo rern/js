@@ -1,19 +1,29 @@
 ## each
+Blocking or syncronous - They wait for finished
 
 ## js: `forEach` - array only
 ```js
-arr.forEach( function( value [, index [, array ] ] ) {
+arr.forEach( function( value [, index ] ) {
 	var value = value;
 	var index = index;
-	// array - 'arr'
-	// this - var on each pass
-}[, this ] );
+} );
 ```
+## js: `some` - array only with break
+```js
+arr.some( function( value [, index ] ) {
+	var value = value;
+	var index = index;
+	return true
+} );
+```
+
 ## jquery: `$.each` array or object
 ```js
 $.each( arr, function( index-or-key, value ) {
 	var index-or-key = index-or-key;
 	var value = value;
+	// continue - return
+	// break - return false
 } );
 ```
 ## jquery: `$( element ).each` - object only
@@ -22,5 +32,7 @@ $( element ).each( function( [ index [, element ] ] ) {
 	var element = $( this );
 	var index = index;
 	var element = element;
+	// continue - return
+	// break - return false
 } );
 ```
