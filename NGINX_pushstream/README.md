@@ -73,6 +73,6 @@ exec( '/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d "{ \"ms
 # json : '{ "msg": "'"$message"'" }'
 # array: '"message1", "'"$message2"'"'
 
-# -s = silent; -v = verbose
+# -s = silent; -v = verbose - IMPORTANT: '"$message"' - var with spaces quotes
 curl -s -X POST 'http://localhost/pub?id=channel0' -d '{ "msg": "'"$message"'" }'
 ```
