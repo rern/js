@@ -48,7 +48,7 @@ credit: [Varun Verma](https://varunver.wordpress.com/2013/05/20/python-post-json
 
 or
 ```python
-# need 'requests' pip package
+# need pip package 'requests'
 import requests
 
 requests.post( 'http://localhost/pub?id=channel0', json={ 'msg': 'message' } )
