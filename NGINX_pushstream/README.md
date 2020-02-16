@@ -68,10 +68,11 @@ exec( '/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d "{ \"ms
 
 **BASH**
 ```sh
-# variables with spaces - defined in double quotes
-# text  : "\"$message"\"
-# json : '{ "msg": "'"$message"'" }'
-# array: '"message1", "'"$message2"'"'
+# variables with spaces - place in double quotes
+# text       : '"$message"'
+# json       : '{ "msg": "'$message'" }'
+# array      : '"message1", "'$message2'"'
+# json+array : '{ "msg": "[ \"message1\", \"'$message2'\" ]" }'
 
 # -s = silent; -v = verbose - IMPORTANT: '"$message"' - var with spaces quotes
 curl -s -X POST 'http://localhost/pub?id=channel0' -d '{ "msg": "'"$message"'" }'
