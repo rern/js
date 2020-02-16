@@ -63,7 +63,7 @@ curl_exec( $ch );
 curl_close( $ch );
 
 // or
-exec( '/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d "{ \"msg\": \"message\" }"' );
+exec( '/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d \'{ "msg": "message" }\'' );
 ```
 
 **BASH**
