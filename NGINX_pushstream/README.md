@@ -68,7 +68,7 @@ exec( '/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d "{ \"ms
 
 **BASH**
 ```sh
-# all json data must be properly formatted with double quotes
+# all json literal must be properly formatted with double quotes
 # variables with spaces - place in double quotes
 # text       : '"$message"'
 # json       : '{ "msg": "'$message'" }'
