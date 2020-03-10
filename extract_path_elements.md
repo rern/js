@@ -14,4 +14,7 @@ var file = FULLPATH.split( '.' ).slice( 0, -1 ).join( '.' );
 
 // /path/to
 var path_to = FULLPATH.substr( 0, FULLPATH.lastIndexOf( '/' ) );
+
+// replace ext
+var newfullpath = FULLPATH.replace( /\.[^.]+$/, '.newext' );
 ```
