@@ -1,5 +1,5 @@
 ## each
-Blocking or syncronous - wait until loop finished
+Blocking or syncronous - wait until loop finished then continue next lines
 
 ## js: `forEach` - array only
 ```js
