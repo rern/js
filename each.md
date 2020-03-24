@@ -36,3 +36,9 @@ $( element ).each( function( [ index [, element ] ] ) {
 	// break - return false
 } );
 ```
+## jquery: `$( element ).filter`
+```js
+$( element ).filter( function() {
+	return $( this ).data( 'name' ) === 'value'
+} ).hide();
+```
