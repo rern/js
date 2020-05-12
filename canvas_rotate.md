@@ -25,6 +25,6 @@ function canvasRotate( imageId, degree ) {
 	}
 	ctx.rotate( radian );
 	ctx.drawImage( img, -trw, -trh );
-	image.src = canvas.toDataURL( 'image/jpeg', 0.9 );
+	image.src = canvas.toDataURL( 'image/jpeg', 1 );
 }
 ```
