@@ -1,5 +1,5 @@
-### Rotate canvas
-
+### Rotate image with canvas
+Actually rotate image data, not just for display.
 ```js
 function canvasRotate( imageId, degree ) {
 	var canvas = document.createElement( 'canvas' );
