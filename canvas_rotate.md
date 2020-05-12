@@ -7,7 +7,7 @@ $( 'body' ).prepend( canvas );
 
 function canvasRotate( degree ) {
 	var img = new Image();
-	img.src = $( '#coverart' ).prop( 'src' );
+	img.src = $( 'img' ).prop( 'src' );
 	var w = img.width;
 	var h = img.height;
 	var trw = w /2;
