@@ -3,36 +3,41 @@
 ```js
 var img = new Image();
 img.src = $( '#coverart' ).prop( 'src' );
+var w = img.width;
+var h = img.height;
+var trw = w /2;
+var trh = h /2;
+var raddeg = Math.PI / 180;
 var canvas = document.createElement( 'canvas' );
+var ctx = canvas.getContext( '2d' );
 $( 'body' ).prepend( canvas );
 
 // 90
-canvas.width = img.height;
-canvas.height = img.width;
-var ctx = canvas.getContext( '2d' );
-ctx.translate( canvas.width / 2, canvas.height / 2 );
-ctx.rotate( 90 * Math.PI / 180 );
-ctx.drawImage( img, -img.width / 2, -img.height / 2 );
+canvas.width = h;
+canvas.height = w;
+ctx.translate( trh, trw );
+ctx.rotate( 90 * raddeg );
+ctx.drawImage( img, -trw, -trh );
 
 // 180
-canvas.width = img.width;
-canvas.height = img.height;
-ctx.translate( canvas.width / 2, canvas.height / 2 );
-ctx.rotate( 180 * Math.PI / 180 );
-ctx.drawImage( img, -img.width / 2, -img.height / 2 );
+canvas.width = w;
+canvas.height = h;
+ctx.translate( trw, trh );
+ctx.rotate( 180 * raddeg );
+ctx.drawImage( img, -trw, -trh );
 
 // 270
-canvas.width = img.height;
-canvas.height = img.width;
+canvas.width = h;
+canvas.height = w;
 var ctx = canvas.getContext( '2d' );
-ctx.translate( canvas.width / 2, canvas.height / 2 );
-ctx.rotate( 270 * Math.PI / 180 );
-ctx.drawImage( img, -img.width / 2, -img.height / 2 );
+ctx.translate( trh, trw );
+ctx.rotate( 270 * raddeg );
+ctx.drawImage( img, -trw, -trh );
 
 // 0
-canvas.width = img.width;
-canvas.height = img.height;
-ctx.translate( canvas.width / 2, canvas.height / 2 );
-ctx.rotate( 0 * Math.PI / 180 );
-ctx.drawImage( img, -img.width / 2, -img.height / 2 );
+canvas.width = w;
+canvas.height = h;
+ctx.translate( trw, trh );
+ctx.rotate( 0 * raddeg );
+ctx.drawImage( img, -trw, -trh );
 ```
