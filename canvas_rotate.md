@@ -16,19 +16,21 @@ function canvasRotate( imageId, degree ) {
 	img.src = image.src;
 	var w = img.width;
 	var h = img.height;
+	var cw = Math.round( w / 2 );
+	var ch = Math.round( h / 2 );
 	var radian = degree * Math.PI / 180;
 	
 	if ( degree === 90 || degree === 270 ) {
 		canvas.width = h;
 		canvas.height = w;
-		ctx.translate( h / 2, w / 2 );
+		ctx.translate( ch, cw );
 	} else {
 		canvas.width = w;
 		canvas.height = h;
-		ctx.translate( w /2, h / 2 );
+		ctx.translate( cw, ch );
 	}
 	ctx.rotate( radian );
-	ctx.drawImage( img, -w / 2, -h / 2 );
+	ctx.drawImage( img, -cw, -ch );
 	image.src = canvas.toDataURL( 'image/jpeg', 1 );
 }
 ```
