@@ -10,21 +10,19 @@ function canvasRotate( imageId, degree ) {
 	img.src = image.src;
 	var w = img.width;
 	var h = img.height;
-	var trw = w /2;
-	var trh = h /2;
 	var radian = degree * Math.PI / 180;
 	
 	if ( degree === 90 || degree === 270 ) {
 		canvas.width = h;
 		canvas.height = w;
-		ctx.translate( trh, trw );
+		ctx.translate( h / 2, w / 2 );
 	} else {
 		canvas.width = w;
 		canvas.height = h;
-		ctx.translate( trw, trh );
+		ctx.translate( w /2, h / 2 );
 	}
 	ctx.rotate( radian );
-	ctx.drawImage( img, -trw, -trh );
+	ctx.drawImage( img, -w / 2, -h / 2 );
 	image.src = canvas.toDataURL( 'image/jpeg', 1 );
 }
 ```
