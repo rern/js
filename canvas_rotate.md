@@ -8,7 +8,7 @@ function canvasRotate( imageId, degree ) {
 	var image = document.getElementById( imageId );
 	var img = new Image();
 	// if base64 image
-	if ( image.slice( 0, 10 ) === 'data:image' ) {
+	if ( image.src.slice( 0, 10 ) === 'data:image' ) {
 		img.onload = function() {
 			ctx.drawImage( image, 0, 0 );
 		}
