@@ -7,6 +7,12 @@ function canvasRotate( imageId, degree ) {
 	
 	var image = document.getElementById( imageId );
 	var img = new Image();
+	// if base64 image
+	if ( image.slice( 0, 10 ) === 'data:image' ) {
+		img.onload = function() {
+			ctx.drawImage( image, 0, 0 );
+		}
+	}
 	img.src = image.src;
 	var w = img.width;
 	var h = img.height;
