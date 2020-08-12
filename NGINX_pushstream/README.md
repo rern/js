@@ -44,7 +44,6 @@ req = urllib2.Request( url, json.dumps( data ), headers = headerdata )
 
 response = urllib2.urlopen( req )
 ```
-credit: [Varun Verma](https://varunver.wordpress.com/2013/05/20/python-post-json-data-curl-equivalent-in-python-using-urllib2/)  
 
 or
 ```python
@@ -63,18 +62,16 @@ curl_exec( $ch );
 curl_close( $ch );
 
 // or
-exec( '/usr/bin/curl -s -v -X POST "http://localhost/pub?id=channel0" -d \'{ "msg": "message" }\'' );
+exec( '/usr/bin/curl -s -v -X POST http://localhost/pub?id=channel0 -d \'{ "msg": "message" }\'' );
 ```
 
 **BASH**
 ```sh
-# all json literal must be properly formatted with double quotes
-# variables with spaces - place in double quotes
+# all json literal must be properly formatted with double quotes except boolean or numbers
 # text       : '"$message"'
 # json       : '{ "msg": "'$message'" }'
-# array      : '"message1", "'$message2'"'
-# json+array : '{ "msg": "[ \"message1\", \"'$message2'\" ]" }'
+# array      : '[ "message1", "'$message2'" ]'
+# json+array : '{ "msg": [ "message1", "'$message2'" ] }'
 
-# -s = silent; -v = verbose - IMPORTANT: '"$message"' - var with spaces quotes
-curl -s -X POST 'http://localhost/pub?id=channel0' -d '{ "msg": "'$message'" }'
+curl -s -X POST http://localhost/pub?id=channel0 -d '{ "msg": "'$message'" }'
 ```
