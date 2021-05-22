@@ -1,4 +1,18 @@
-## each
+```js
+// clone json
+var newjson = JSON.parse( JSON.stringify( json ) );
+// remove an element
+delete json.key;
+// get keys
+var keys = Object.keys( json );
+// get values
+var values = Object.values( json );
+
+// clone array
+var newarray = array.slice( 0 );
+// remove elements with reset index
+array,splice( i, length );
+```
 
 ## js: `forEach` - array only
 ```js
