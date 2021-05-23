@@ -29,7 +29,7 @@ var newarray = [ARRAY].slice( 0 );
 	return $( this ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
-## jquery: `$( ELEMENT ).toArray().some( ...` - return 1st matched element only
+## jquery+js: `$( ELEMENT ).toArray().some( ...` - return 1st matched element only
 ```js
 $( ELEMENT ).toArray().some( function( element, index ) {
 	var $element = element;
@@ -37,13 +37,13 @@ $( ELEMENT ).toArray().some( function( element, index ) {
 	return $( el ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
-## jquery: `[ARRAY]orOBJECT.filter( ...` - return all matched
+## jquery: `OBJECT.filter( ...` - return all matched
 ```js
-[ARRAY]orOBJECT.filter( function() {
+OBJECT.filter( function() {
 	return $( this ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } ).hide();
 ```
-## jquery: `$.each( [ARRAY]orOBJECT, ...`
+## jquery: `$.each( OBJECT, ...`
 ```js
 $.each( [ARRAY], function( index, value ) {
 	var index = index;
