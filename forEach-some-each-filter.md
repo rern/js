@@ -31,8 +31,8 @@ ARRAY.splice( i, length );
 ```
 ## jquery: `$( ELEMENT ).toArray().some( ...` - return 1st matched element only
 ```js
-$( ELEMENT ).toArray().some( function( el, index ) {
-	var $el = el;
+$( ELEMENT ).toArray().some( function( element, index ) {
+	var $element = element;
 	var index = index;
 	return $( el ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
