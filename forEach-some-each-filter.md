@@ -1,17 +1,17 @@
 ```js
 // clone json
-var newjson = JSON.parse( JSON.stringify( JSON ) );
+var newjson = JSON.parse( JSON.stringify( {J:SON} ) );
 // remove an element
 delete json.key;
 // get keys
-var keys = Object.keys( JSON );
+var keys = Object.keys( {J:SON} );
 // get values
-var values = Object.values( JSON );
+var values = Object.values( {J:SON} );
 
 // clone array
-var newarray = ARRAY.slice( 0 );
+var newarray = [ARRAY].slice( 0 );
 // remove elements with reset index
-ARRAY.splice( i, length );
+[ARRAY].splice( i, length );
 ```
 
 ## js: `[ARRAY].forEach( ...`
@@ -45,16 +45,24 @@ $( ELEMENT ).toArray().some( function( element, index ) {
 ```
 ## jquery: `$.each( [ARRAY]orOBJECT, ...`
 ```js
-$.each( [ARRAY]orOBJECT, function( index-or-key, value ) {
-	var index = index; // or: key = key
-	var value = value;
+$.each( [ARRAY], function( index, value ) {
+	var index = index;
+	var value = value; // or: value = this;
 	// continue - return
 	// break - return false
 } );
+$.each( {J:SON}, function( key, value ) {
+	var key = key;
+	var value = value; // or: value = this;
+} );
+$.each( $( ELEMENT ), function( index, element ) {
+	var index = index;
+	var element = $( element ); // or: $( this )
+} );
 ```
-## jquery: `OBJECT.each( ...`
+## jquery: `$( ELEMENT ).each( ...`
 ```js
-OBJECT.each( function( index, element ) {
+$( ELEMENT ).each( function( index, element ) {
 	var index = index;
 	var element = $( element ); // or: $( this )
 	// continue - return
