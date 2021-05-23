@@ -29,6 +29,14 @@ ARRAY.some( function( value [, index ] ) {
 	return $( this ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
+## jquery: `$( element ).toArray().some( ...` - return 1st matched element only
+```js
+$( element ).toArray().some( function( el, index ) {
+	var $el = el;
+	var index = index;
+	return $( el ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
+} );
+```
 ## jquery: `ARRAYorOBJECT.filter( ...` - return all matched
 ```js
 ARRAYorOBJECT.filter( function() {
