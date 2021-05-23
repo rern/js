@@ -54,7 +54,7 @@ $.each( [ARRAY]orOBJECT, function( index-or-key, value ) {
 ```
 ## jquery: `OBJECT.each( ...`
 ```js
-OBJECT.each( function( [ index [, element ] ] ) {
+OBJECT.each( function( index, element ) {
 	var index = index;
 	var element = $( element ); // or: $( this )
 	// continue - return
