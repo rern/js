@@ -1,6 +1,6 @@
 ```js
 // clone json
-var newjson = JSON.parse( JSON.stringify( json ) );
+var newjson = JSON.parse( JSON.stringify( JSON ) );
 // remove an element
 delete json.key;
 // get keys
@@ -11,29 +11,34 @@ var values = Object.values( json );
 // clone array
 var newarray = array.slice( 0 );
 // remove elements with reset index
-array,splice( i, length );
+ARRAY.splice( i, length );
 ```
 
 ## js: `forEach` - array only
 ```js
-arr.forEach( function( value [, index ] ) {
+ARRAY.forEach( function( value [, index ] ) {
 	var value = value;
 	var index = index;
 } );
 ```
-## js: `some` - array only with break
+## js: `some` - array only - return 1st matched only
 ```js
-arr.some( function( value [, index ] ) {
+ARRAY.some( function( value [, index ] ) {
 	var value = value;
 	var index = index;
-	return true
+	return $( this ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
-
+## jquery: `$( element ).filter` - return all matched
+```js
+ARRAY orOBJECT.filter( function() {
+	return $( this ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
+} ).hide();
+```
 ## jquery: `$.each` array or object
 ```js
-$.each( arr, function( index-or-key, value ) {
-	var index-or-key = index-or-key;
+$.each( ARRAYorOBJECT, function( index-or-key, value ) {
+	var index = index; // or: key = key
 	var value = value;
 	// continue - return
 	// break - return false
@@ -41,17 +46,10 @@ $.each( arr, function( index-or-key, value ) {
 ```
 ## jquery: `$( element ).each` - object only
 ```js
-$( element ).each( function( [ index [, element ] ] ) {
-	var element = $( this );
+OBJECT.each( function( [ index [, element ] ] ) {
 	var index = index;
-	var element = element;
+	var element = $( element ); // or: $( this )
 	// continue - return
 	// break - return false
 } );
-```
-## jquery: `$( element ).filter`
-```js
-$( element ).filter( function() {
-	return $( this ).data( 'name' ) === 'value'
-} ).hide();
 ```
