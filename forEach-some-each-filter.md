@@ -26,20 +26,21 @@ var newarray = [ARRAY].slice( 0 );
 [ARRAY].some( function( value [, index ] ) {
 	var value = value;
 	var index = index;
-	return $( this ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
+	return value === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
-## jquery+js: `$( ELEMENT ).toArray().some( ...` - return 1st matched element only
+## jquery+js: `$( DOM ).toArray().some( ...` - return 1st matched element only
 ```js
-$( ELEMENT ).toArray().some( function( element, index ) {
-	var $element = element;
+$( DOM ).toArray().some( function( element [, index ] ) {
+	var $element = $( element );
 	var index = index;
-	return $( el ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
+	return $( element ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
 ## jquery: `OBJECT.filter( ...` - return all matched
 ```js
-OBJECT.filter( function() {
+OBJECT.filter( function( index ) {
+	var index = index;
 	return $( this ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } ).hide();
 ```
@@ -55,14 +56,14 @@ $.each( {J:SON}, function( key, value ) {
 	var key = key;
 	var value = value; // or: value = this;
 } );
-$.each( $( ELEMENT ), function( index, element ) {
+$.each( $( DOM ), function( index, element ) {
 	var index = index;
 	var element = $( element ); // or: $( this )
 } );
 ```
-## jquery: `$( ELEMENT ).each( ...`
+## jquery: `$( DOM ).each( ...`
 ```js
-$( ELEMENT ).each( function( index, element ) {
+$( DOM ).each( function( index, element ) {
 	var index = index;
 	var element = $( element ); // or: $( this )
 	// continue - return
