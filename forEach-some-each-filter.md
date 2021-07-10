@@ -12,6 +12,9 @@ var values = Object.values( {J:SON} );
 var newarray = [ARRAY].slice( 0 );
 // remove elements with reset index
 [ARRAY].splice( i, length );
+
+// compare array
+var equal = new Set( [ARRAY] ).size === [ARRAY].length;
 ```
 
 ## js: `[ARRAY].forEach( ...`
