@@ -52,8 +52,8 @@ OBJECT.filter( function( index ) {
 $.each( [ARRAY], function( index, value ) {
 	var index = index;
 	var value = value; // or: value = this;
-	// continue - return
-	// break - return false
+	// continue : return
+	// break    : return false
 } );
 $.each( {J:SON}, function( key, value ) {
 	var key = key;
@@ -69,7 +69,7 @@ $.each( $( DOM ), function( index, element ) {
 $( DOM ).each( function( index, element ) {
 	var index = index;
 	var element = $( element ); // or: $( this )
-	// continue - return
-	// break - return false
+	// continue : return
+	// break    : return false
 } );
 ```
