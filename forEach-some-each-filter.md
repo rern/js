@@ -26,11 +26,12 @@ var equal = new Set( [ARRAY] ).size === [ARRAY].length;
 ```
 ### js: `[ARRAY].some` - return 1st matched only
 ```js
-[ARRAY].some( function( value [, index ] ) {
+var matched = [ARRAY].some( function( value [, index ] ) {
 	var value = value;
 	var index = index;
 	return value === 'value' // or: if ( BOOLEAN ) return true
 } );
+// no matched return false
 ```
 ### jquery+js: `$( DOM ).toArray().some( ...` - return 1st matched element only
 ```js
