@@ -43,33 +43,33 @@ $( DOM ).toArray().some( function( element [, index ] ) {
 ```
 ### jquery: `OBJECT.filter( ...` - return all matched
 ```js
-OBJECT.filter( function( index ) {
+OBJECT.filter( function( index, element ) {
 	var index = index;
-	return $( this ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
+	return $( element ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } ).hide();
 ```
 ### jquery: `$.each( OBJECT, ...`
 ```js
 $.each( [ARRAY], function( index, value ) {
 	var index = index;
-	var value = value; // or: value = this;
+	var value = value;
 	// continue : return
 	// break    : return false
 } );
 $.each( {J:SON}, function( key, value ) {
 	var key = key;
-	var value = value; // or: value = this;
+	var value = value;
 } );
 $.each( $( DOM ), function( index, element ) {
 	var index = index;
-	var element = $( element ); // or: $( this )
+	var element = $( element );
 } );
 ```
 ### jquery: `$( DOM ).each( ...`
 ```js
 $( DOM ).each( function( index, element ) {
 	var index = index;
-	var element = $( element ); // or: $( this )
+	var element = $( element );
 	// continue : return
 	// break    : return false
 } );
