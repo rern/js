@@ -17,7 +17,7 @@ var newarray = [ARRAY].slice( 0 );
 var equal = new Set( [ARRAY] ).size === [ARRAY].length;
 ```
 ## `forEach`
-### js: `[ARRAY].forEach( ...`
+### `[ARRAY].forEach( ...`
 ```js
 [ARRAY].forEach( function( value, index ) {
 	var value = value;
@@ -25,7 +25,7 @@ var equal = new Set( [ARRAY] ).size === [ARRAY].length;
 } );
 ```
 ## `some`
-### js: `[ARRAY].some` - return 1st matched only
+### `[ARRAY].some` - return 1st matched only
 ```js
 var matched = [ARRAY].some( function( value, index ) {
 	var value = value;
@@ -34,7 +34,7 @@ var matched = [ARRAY].some( function( value, index ) {
 } );
 // no matched return false
 ```
-### jquery+js: `$( DOM ).toArray().some( ...` - return 1st matched element only
+### `$( DOM ).toArray().some( ...`
 ```js
 $( DOM ).toArray().some( function( element, index ) {
 	var $element = $( element );
@@ -43,21 +43,21 @@ $( DOM ).toArray().some( function( element, index ) {
 } );
 ```
 ## `filter`
-### js: `[ARRAY].filter( ...` - return all matched
+### `[ARRAY].filter( ...` - return all matched
 ```js
 [ARRAY].filter( function( element, index ) {
 	return index === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
-### jquery: `OBJECT.filter( ...` - return all matched
+###  `$( DOM ).filter( ...` - return all matched
 ```js
-OBJECT.filter( function( index, element ) {
+$( DOM ).filter( function( index, element ) {
 	var index = index;
 	return $( element ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
 ## `each`
-### jquery: `$.each( OBJECT, ...`
+### `$.each( OBJECT ...` / `$( DOM ).each( ...`
 ```js
 $.each( [ARRAY], function( index, value ) {
 	var index = index;
@@ -69,17 +69,15 @@ $.each( {J:SON}, function( key, value ) {
 	var key = key;
 	var value = value;
 } );
-$.each( $( DOM ), function( index, element ) {
-	var index = index;
-	var element = $( element );
-} );
-```
-### jquery: `$( DOM ).each( ...`
-```js
+
 $( DOM ).each( function( index, element ) {
 	var index = index;
 	var element = $( element );
 	// continue : return
 	// break    : return false
+} );
+$.each( $( DOM ), function( index, element ) {
+	var index = index;
+	var element = $( element );
 } );
 ```
