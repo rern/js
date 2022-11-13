@@ -16,68 +16,68 @@ var newarray = [ARRAY].slice( 0 );
 // compare array
 var equal = new Set( [ARRAY] ).size === [ARRAY].length;
 ```
-## `forEach`
-### `[ARRAY].forEach( ...`
+### `forEach`
+`( value, index )`
 ```js
-[ARRAY].forEach( function( value, index ) {
+[ARRAY].forEach( ( value, index ) => {
 	var value = value;
 	var index = index;
 } );
 ```
-## `some`
-### `[ARRAY].some` - return 1st matched only
+### `some`
+`( value, index )` - return 1st matched only
 ```js
-var matched = [ARRAY].some( function( value, index ) {
+var matched = [ARRAY].some( ( value, index ) => {
 	var value = value;
 	var index = index;
 	return value === 'value' // or: if ( BOOLEAN ) return true
 } );
 // no matched return false
-```
-### `$( DOM ).toArray().some( ...`
-```js
-$( DOM ).toArray().some( function( element, index ) {
+
+$( DOM ).toArray().some( ( element, index ) => {
 	var $element = $( element );
 	var index = index;
 	return $( element ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
-## `filter`
-### `[ARRAY].filter( ...` - return all matched
+### `filter`
+`( element, index )`
 ```js
-[ARRAY].filter( function( element, index ) {
+[ARRAY].filter( ( element, index ) => {
 	return index === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
-###  `$( DOM ).filter( ...` - return all matched
+`( index, element )`
 ```js
-$( DOM ).filter( function( index, element ) {
+$( DOM ).filter( ( index, element ) => {
 	var index = index;
 	return $( element ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
-## `each`
-### `$.each( OBJECT ...` / `$( DOM ).each( ...`
+### `each`
+`( index, element )`
 ```js
-$.each( [ARRAY], function( index, value ) {
+$.each( [ARRAY], ( index, value ) => {
 	var index = index;
 	var value = value;
 	// continue : return
 	// break    : return false
 } );
-$.each( {J:SON}, function( key, value ) {
+$.each( $( DOM ), ( index, element ) => {
+	var index = index;
+	var element = $( element );
+} );
+$( DOM ).each( ( index, element ) => {
+	var index = index;
+	var element = $( element );
+	// continue : return
+	// break    : return false
+} );
+```
+`( key, value )`
+```js
+$.each( {J:SON}, ( key, value ) => {
 	var key = key;
 	var value = value;
-} );
-
-$( DOM ).each( function( index, element ) {
-	var index = index;
-	var element = $( element );
-	// continue : return
-	// break    : return false
-} );
-$.each( $( DOM ), function( index, element ) {
-	var index = index;
-	var element = $( element );
 } );
 ```
