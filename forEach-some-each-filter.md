@@ -19,14 +19,14 @@ var equal = new Set( [ARRAY] ).size === [ARRAY].length;
 
 ### js: `[ARRAY].forEach( ...`
 ```js
-[ARRAY].forEach( function( value [, index ] ) {
+[ARRAY].forEach( function( value[, index ] ) {
 	var value = value;
 	var index = index;
 } );
 ```
 ### js: `[ARRAY].some` - return 1st matched only
 ```js
-var matched = [ARRAY].some( function( value [, index ] ) {
+var matched = [ARRAY].some( function( value[, index ] ) {
 	var value = value;
 	var index = index;
 	return value === 'value' // or: if ( BOOLEAN ) return true
@@ -35,7 +35,7 @@ var matched = [ARRAY].some( function( value [, index ] ) {
 ```
 ### jquery+js: `$( DOM ).toArray().some( ...` - return 1st matched element only
 ```js
-$( DOM ).toArray().some( function( element [, index ] ) {
+$( DOM ).toArray().some( function( element[, index ] ) {
 	var $element = $( element );
 	var index = index;
 	return $( element ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
@@ -43,7 +43,7 @@ $( DOM ).toArray().some( function( element [, index ] ) {
 ```
 ### jquery: `OBJECT.filter( ...` - return all matched
 ```js
-OBJECT.filter( function( index, element ) {
+OBJECT.filter( function( element[, index ] ) {
 	var index = index;
 	return $( element ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } ).hide();
