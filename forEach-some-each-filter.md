@@ -66,12 +66,13 @@ $.each( [ARRAY], ( index, value ) => {
 $.each( $( DOM ), ( index, element ) => {
 	var index = index;
 	var element = $( element );
+	// continue : return
+	// break    : return false
 } );
+// alternative syntax
 $( DOM ).each( ( index, element ) => {
 	var index = index;
 	var element = $( element );
-	// continue : return
-	// break    : return false
 } );
 ```
 `( key, value )`
