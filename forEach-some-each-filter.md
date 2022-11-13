@@ -17,7 +17,7 @@ var newarray = [ARRAY].slice( 0 );
 var equal = new Set( [ARRAY] ).size === [ARRAY].length;
 ```
 ### `forEach`
-`( value, index )`
+js: `( value, index )`
 ```js
 [ARRAY].forEach( ( value, index ) => {
 	var value = value;
@@ -25,14 +25,14 @@ var equal = new Set( [ARRAY] ).size === [ARRAY].length;
 } );
 ```
 ### `some`
-`( value, index )` - return 1st matched only
+js: `( value, index )` - return 1st matched only
 ```js
 var matched = [ARRAY].some( ( value, index ) => {
 	var value = value;
 	var index = index;
 	return value === 'value' // or: if ( BOOLEAN ) return true
+	// no matched return false
 } );
-// no matched return false
 
 $( DOM ).toArray().some( ( element, index ) => {
 	var $element = $( element );
@@ -41,13 +41,13 @@ $( DOM ).toArray().some( ( element, index ) => {
 } );
 ```
 ### `filter`
-`( element, index )`
+js: `( element, index )`
 ```js
 [ARRAY].filter( ( element, index ) => {
 	return index === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
-`( index, element )`
+jquery: `( index, element )`
 ```js
 $( DOM ).filter( ( index, element ) => {
 	var index = index;
@@ -55,7 +55,7 @@ $( DOM ).filter( ( index, element ) => {
 } );
 ```
 ### `each`
-`( index, element )`
+jquery: `( index, element )`
 ```js
 $.each( [ARRAY], ( index, value ) => {
 	var index = index;
@@ -75,7 +75,7 @@ $( DOM ).each( ( index, element ) => {
 	var element = $( element );
 } );
 ```
-`( key, value )`
+jquery: `( key, value )`
 ```js
 $.each( {J:SON}, ( key, value ) => {
 	var key = key;
