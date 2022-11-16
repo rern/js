@@ -5,11 +5,11 @@ var newjson = JSON.parse( JSON.stringify( {J:SON} ) );
 delete json.key;
 
 // get array of keys
-var keys    = Object.keys( {J:SON} );
+var ARRAY = Object.keys( {J:SON} );
 // get array of values
-var values  = Object.values( {J:SON} );
+var ARRAY = Object.values( {J:SON} );
 // get array of key-value
-Object.entries( {J:SON} );
+var ARRAY = Object.entries( {J:SON} );
 
 // clone array
 var newarray = [ARRAY].slice( 0 );
