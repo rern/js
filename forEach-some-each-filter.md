@@ -3,10 +3,13 @@
 var newjson = JSON.parse( JSON.stringify( {J:SON} ) );
 // remove an element
 delete json.key;
-// get keys
+
+// get array of keys
 var keys    = Object.keys( {J:SON} );
-// get values
+// get array of values
 var values  = Object.values( {J:SON} );
+// get array of key-value
+Object.entries( {J:SON} );
 
 // clone array
 var newarray = [ARRAY].slice( 0 );
