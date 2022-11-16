@@ -24,20 +24,25 @@ js: `( value, index )`
 	var index = index;
 } );
 ```
+js: `( [ key, value ] )`
+```js
+Object.entries( JSON ).forEach( ( [ key, value ] ) => {
+	var key   = key;
+	var value = value;
+} );
+```
 ### `some`
 js: `( value, index )` - return 1st matched only
 ```js
-var matched = [ARRAY].some( ( value, index ) => {
+var ARRAY = [ARRAY];             // or
+var ARRAY = $( DOM ).toArray();  // or
+var ARRAY = Object.keys( JSON ); // or
+var ARRAY = Object.values( JSON );
+var matched = ARRAY.some( ( value, index ) => {
 	var value = value;
 	var index = index;
 	return value === 'value' // or: if ( BOOLEAN ) return true
 	// no matched return false
-} );
-
-$( DOM ).toArray().some( ( element, index ) => {
-	var $element = $( element );
-	var index = index;
-	return $( element ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
 ```
 ### `filter`
@@ -77,7 +82,7 @@ $( DOM ).each( ( index, element ) => {
 ```
 jquery: `( key, value )`
 ```js
-$.each( {J:SON}, ( key, value ) => {
+$.each( JSON, ( key, value ) => {
 	var key = key;
 	var value = value;
 } );
