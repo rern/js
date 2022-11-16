@@ -4,9 +4,9 @@ var newjson = JSON.parse( JSON.stringify( {J:SON} ) );
 // remove an element
 delete json.key;
 // get keys
-var keys = Object.keys( {J:SON} );
+var keys    = Object.keys( {J:SON} );
 // get values
-var values = Object.values( {J:SON} );
+var values  = Object.values( {J:SON} );
 
 // clone array
 var newarray = [ARRAY].slice( 0 );
@@ -26,7 +26,7 @@ js: `( value, index )`
 ```
 js: `( [ key, value ] )`
 ```js
-Object.entries( JSON ).forEach( ( [ key, value ] ) => {
+Object.entries( {J:SON} ).forEach( ( [ key, value ] ) => {
 	var key   = key;
 	var value = value;
 } );
@@ -35,9 +35,9 @@ Object.entries( JSON ).forEach( ( [ key, value ] ) => {
 js: `( value, index )` - return 1st matched only
 ```js
 var ARRAY = [ARRAY];             // or
-var ARRAY = $( DOM ).toArray();  // or
-var ARRAY = Object.keys( JSON ); // or
-var ARRAY = Object.values( JSON );
+var ARRAY = $(DOM).toArray();  // or
+var ARRAY = Object.keys( {J:SON} ); // or
+var ARRAY = Object.values( {J:SON} );
 var matched = ARRAY.some( ( value, index ) => {
 	var value = value;
 	var index = index;
@@ -54,7 +54,7 @@ js: `( element, index )`
 ```
 jquery: `( index, element )`
 ```js
-$( DOM ).filter( ( index, element ) => {
+$(DOM).filter( ( index, element ) => {
 	var index = index;
 	return $( element ).data( 'name' ) === 'value' // or: if ( BOOLEAN ) return true
 } );
@@ -68,21 +68,21 @@ $.each( [ARRAY], ( index, value ) => {
 	// continue : return
 	// break    : return false
 } );
-$.each( $( DOM ), ( index, element ) => {
+$.each( $(DOM), ( index, element ) => {
 	var index = index;
 	var element = $( element );
 	// continue : return
 	// break    : return false
 } );
 // alternative syntax
-$( DOM ).each( ( index, element ) => {
+$(DOM).each( ( index, element ) => {
 	var index = index;
 	var element = $( element );
 } );
 ```
 jquery: `( key, value )`
 ```js
-$.each( JSON, ( key, value ) => {
+$.each( {J:SON}, ( key, value ) => {
 	var key = key;
 	var value = value;
 } );
