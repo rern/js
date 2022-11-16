@@ -37,9 +37,9 @@ Object.entries( {J:SON} ).forEach( ( [ key, value ] ) => {
 ### `some`
 js: `( value, index )` - return 1st matched only
 ```js
-var ARRAY = [ARRAY];             // or
-var ARRAY = $(DOM).toArray();  // or
-var ARRAY = Object.keys( {J:SON} ); // or
+var ARRAY = [ARRAY];                  // or
+var ARRAY = $(DOM).toArray();         // or
+var ARRAY = Object.keys( {J:SON} );   // or
 var ARRAY = Object.values( {J:SON} );
 var matched = ARRAY.some( ( value, index ) => {
 	var value = value;
