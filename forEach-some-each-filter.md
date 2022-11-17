@@ -1,3 +1,8 @@
+### Usage:
+- `[ARRAY].forEach( ...`
+- `$.each( {J:SON}, ...`
+- `$(DOM).each( ...`
+
 ```js
 // clone json
 var newjson = JSON.parse( JSON.stringify( {J:SON} ) );
