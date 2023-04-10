@@ -1,15 +1,16 @@
 ### info.js
 ```js
 `==================================
-| icon - title                  X |    - Debug      : Long-press Ok for console.log
-|---------------------------------|    - Get values : infoVal( ''|'array'|'KEY'|'CFG' )
-|      tab0      |      tab1      |    - ''
-|                -----------------|        - no info.values - return [ v1, v2, ... ] or v1 (single value - as string)
+| icon - title                  X |    - Usage      : Long-press icon for this page
+|---------------------------------|    - Debug      : Long-press Ok for console.log
+|      tab0      |      tab1      |    - Get values : infoVal( ''|'array'|'KEY'|'CFG' )
+|                -----------------|      - ''
+|                                 |        - no info.values - return [ v1, v2, ... ] or v1 (single value - as string)
 |             message             |        - info.values    - return the same type - string / array / json
-|    input / select / textarea    |    - 'array'
+|    input / select / textarea    |      - 'array'
 |              footer             |        - force return [ v1, v2, ... ] or [ v1 ]
-|                                 |    - 'KEY' / 'CFG'
-|   file - button - cancel - ok   |        - force return [ v1, v2, ..., 'KEY k1 k2 ... ]
+|                                 |      - 'KEY' / 'CFG'
+|   file - button - cancel - ok   |        - force return [ v1, v2, ..., 'KEY/CFG k1 k2 ... ]
 ===================================`
 
 info( {	                                            // default
