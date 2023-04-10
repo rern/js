@@ -1,31 +1,18 @@
 ### info.js
-
-```
-===================================
-| icon - title                  X |
-|---------------------------------|
-|      tab0      |      tab1      |
-|                -----------------|
-|             message             |
-|    input / select / textarea    |
-|              footer             |
-|                                 |
-|   file - button - cancel - ok   |
-===================================
-```
-- Debug      : Long-press Ok for console.log
-- Get values : infoVal( ''|'array'|'KEY'|'CFG' )
-	- ''
-		- no `info.values` - return `[ v1, v2, ... ]` or `v1` (single value - as string)
-		- `I.values` - return the same type - string / array / json
-	- 'array'
-		- force return `[ v1, v2, ... ]` or `[ v1 ]`
-	- 'KEY' / 'CFG'
-		- force return `[ v1, v2, ..., 'KEY k1 k2 ... ]`
-
-- Syntax:
 ```js
-info( {                                         // default
+`==================================
+| icon - title                  X |    - Debug      : Long-press Ok for console.log
+|---------------------------------|    - Get values : infoVal( ''|'array'|'KEY'|'CFG' )
+|      tab0      |      tab1      |    - ''
+|                -----------------|        - no info.values - return [ v1, v2, ... ] or v1 (single value - as string)
+|             message             |        - info.values    - return the same type - string / array / json
+|    input / select / textarea    |    - 'array'
+|              footer             |        - force return [ v1, v2, ... ] or [ v1 ]
+|                                 |    - 'KEY' / 'CFG'
+|   file - button - cancel - ok   |        - force return [ v1, v2, ..., 'KEY k1 k2 ... ]
+===================================`
+
+info( {	                                            // default
 	  icon          : 'NAME'                    // 'question'     (top icon)
 	, title         : 'TITLE'                   // 'Information'  (top title)
 	, width         : N                         // 400            (info width)
@@ -53,7 +40,7 @@ info( {                                         // default
 	, boxwidth      : N                         // 200            (input width - 'max' to fit)
 	
 	, radio         : { LABEL: 'VALUE', ... }   // ***
-	                [ 'VALUE', ... ]                            (label = value)
+	                [ 'VALUE', ... ]            //                (label = value)
 	, radiocolumn   : true                      // --             (layout 2 colums)
 	
 	, checkbox      : [ 'LABEL', ... ]          // ***            (value = true/false if not json)
@@ -61,11 +48,11 @@ info( {                                         // default
 	, checkcolumn   : true                      // --             (layout 2 colums)
 	
 	, select        : { LABEL: 'VALUE', ... }   // ***
-	                [ LABEL, ... ]                              (option label = value)
+	                [ LABEL, ... ]              //                (option label = value)
 	, selectlabel   : 'LABEL'                   // --             (select input label)
 	
 	, rangelabel    : 'LABEL'                   // ***            (input range label)
-	, rangesub      : 'SUBLABEL'                '' --             (sublabel under range)
+	, rangesub      : 'SUBLABEL'                // --             (sublabel under range)
 	
 	, order         : [ TYPE, ... ]             // (sequence)     (order of *** inputs)
 	
@@ -98,10 +85,10 @@ info( {                                         // default
 	, checkblank    : true or [ i, ... ]        // --             (check values not blank /  [ partial ] )
 	, checkip       : [ i, ... ]                // --             (check valid ip)
 	, checklength   : { i: N, . }               // --             (required N characters in i)
-	                { i: [ N, 'COND' ], ... }                     (required N: characters; COND: min, max; in i)
+	                { i: [ N, 'COND' ], ... }   //                (required N: characters; COND: min, max; in i)
 	
 	, values        : [ 'VALUE', ... ]          // --             (default values - in layout order)
-	                { KEY: 'VALUE', ... }                         (return bash var - [ 'KEY=value', ... ])
+	                { KEY: 'VALUE', ... }       //                (return bash var - [ 'KEY=value', ... ])
 	
 	, fileconf      : true                      // --             (bash: save key=value to $system/$cmd.conf)
 } );
