@@ -79,9 +79,6 @@ info( {	                                            // default
 	, okcolor       : 'COLOR'                   // 'var( --cm )'  (ok button color)
 	, oknoreset     : true                      // --             (keep info open + omit reset; reset by cancel only)
 	
-	, confirm       : 'CONFIRM'                 // --             (confirm prompt)
-	, confirmno     : FUNCTION                  // --             (skip confirm if FUNCTION true)
-	
 	, checkchanged  : true                      // --             (check values changed)
 	, checkblank    : true or [ i, ... ]        // --             (check values not blank /  [ partial ] )
 	, checkip       : [ i, ... ]                // --             (check valid ip)
