@@ -43,6 +43,7 @@ info( {	                                            // default
 	, radio         : { LABEL: 'VALUE', ... }   // ***
 	                [ 'VALUE', ... ]            //                (label = value)
 	, radiocolumn   : true                      // --             (layout 2 colums)
+	, radiosingle   : true                      // --             (layout single line)
 	
 	, checkbox      : [ 'LABEL', ... ]          // ***            (value = true/false if not json)
 	                { LABEL: 'VALUE', ... }  
