@@ -1,9 +1,17 @@
-### Last.fm - Delete all scrobbles
+### Last.fm Scrobble Delete
 
+- All
+```js
+jQuery( '.more-item--delete' ).each( ( i, el ) => el.click() );
+```
+
+- Select
 ```js
 // add checkboxes
 $ = jQuery.noConflict();
 $( '.chartlist-play' ).before( '<input type="checkbox">' );
+
+// select
 
 // delete checked
 $( '.chartlist-row' ).each( ( i, el ) => {
