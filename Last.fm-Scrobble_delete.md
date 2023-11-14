@@ -9,9 +9,9 @@ jQuery( '.more-item--delete' ).each( ( i, el ) => el.click() );
 ```js
 // add checkboxes
 $ = jQuery.noConflict();
-$( '.chartlist-play' ).before( '<input type="checkbox">' );
+$( '.chartlist-play' ).before( '<input type="checkbox" checked>' );
 
-// select
+// uncheck items to keep
 
 // delete checked
 $( '.chartlist-row' ).each( ( i, el ) => {
