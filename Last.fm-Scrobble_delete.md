@@ -2,7 +2,7 @@
 ```js
 $ = jQuery.noConflict();
 $( '.chartlist-row' ).eq( 0 ).before( '&emsp;<input id="check" type="checkbox" checked>&emsp;<a id="delete" class="btn-primary" style="cursor: pointer">Delete</a>' );
-$( '.chartlist-play' ).before( '<input type="checkbox" checked>' );
+$( '.chartlist-play' ).before( '<input type="checkbox">' );
 $( '#check' ).on( 'click', function() {
 	$( '.chartlist-row input' ).prop( 'checked', $( this ).prop( 'checked' ) );
 } );
