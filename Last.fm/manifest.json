@@ -1,12 +1,15 @@
 {
-    "name": "Scrobble delete",
-    "version": "0.1",
-    "manifest_version": 3,
-    "description": "Select and delete Last.fm scrobbles",
-	"icons": {
-        "16": "icons/icon.png",
-        "32": "icons/icon.png",
-        "48": "icons/icon.png",
-        "128": "icons/icon.png"
+      "name"             : "Scrobble delete"
+    , "version"          : "0.1"
+    , "manifest_version" : 3
+    , "description"      : "Select and delete Last.fm scrobbles"
+	, "icons"            : {
+          "16"  : "icons/icon.png"
+        , "32"  : "icons/icon.png"
+        , "48"  : "icons/icon.png"
+        , "128" : "icons/icon.png"
+    }
+	, "action"           : {
+        "default_popup": "popup.html"
     }
 }
