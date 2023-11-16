@@ -1,0 +1,6 @@
+{
+    "name": "Scrobble delete",
+    "version": "0.1",
+    "manifest_version": 3,
+    "description": "Select and delete Last.fm scrobbles"
+}
