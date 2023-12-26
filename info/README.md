@@ -24,17 +24,20 @@ info( {                                         // default
     , content       : 'HTML'                    // ***            (custom html <table> input content)
     , height        : N                         // (fit)          (infocontent height)
     , contentcssno  : true                      // --             (omit content css)
-    
+
+	, header        : 'HEADER'                  // --             (header above message)
+    , headeralign   : 'CSS'                     // 'center'
     , message       : 'MESSAGE'                 // --             (message under title)
     , messagealign  : 'CSS'                     // 'center'
     , footer        : 'FOOTER'                  // --             (footer above buttons)
     , footeralign   : 'CSS'                     // 'center'
 
     , list          : [
-          [ 'LABEL', 'TYPE' ]                   // text, number, password, textarea, range
-        , [ 'LABEL', 'TYPE', 'td' ]             // checkbox      (td - single line)
-        , [ 'LABEL', 'TYPE', { K: V }, 'br' ]   // radio         (br - 1:1 line)
-        , [ 'LABEL', 'TYPE', { K: V } ]         // select
+          [ 'LABEL', 'TYPE' ]                   // password, textarea, range
+		, [ 'LABEL', 'TYPE', 'PLACEHOLDER' ]    // text, number
+        , [ 'LABEL', 'checkbox', 'td' ]         // checkbox      (td - single line)
+        , [ '',      'radio',  { K: V }, 'br' ] // radio         (br - 1:1 line)
+        , [ 'LABEL', 'select', { K: V } ]       // select
     ]
     , focus         : N                         // --             (focused input)
     , beforeshow    : FUNCTION                  // --             (function after values set)
