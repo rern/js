@@ -29,35 +29,14 @@ info( {                                         // default
     , messagealign  : 'CSS'                     // 'center'
     , footer        : 'FOOTER'                  // --             (footer above buttons)
     , footeralign   : 'CSS'                     // 'center'
-    
-    , textlabel     : [ 'LABEL', ... ]          // ***            (label array input label)
-    , textalign     : 'CSS'                     // 'left'         (input text alignment)
+
+    , list          : [
+          [ 'LABEL', 'TYPE' ]                   // text, number, password, textarea, range
+        , [ 'LABEL', 'TYPE', 'td' ]             // checkbox      (td - single line)
+        , [ 'LABEL', 'TYPE', { K: V }, 'br' ]   // radio         (br - 1:1 line)
+        , [ 'LABEL', 'TYPE', { K: V } ]         // select
+    ]
     , focus         : N                         // --             (focused input)
-    
-    , passwordlabel : 'LABEL'                   // ***            (password input label)
-    
-    , textarea      : true                      // ***
-    
-    , boxwidth      : N                         // 200            (input width - 'max' to fit)
-    
-    , radio         : { LABEL: 'VALUE', ... }   // ***
-                   // [ 'VALUE', ... ]          //                (label = value)
-    , radiocolumn   : true                      // --             (layout 2 colums)
-    , radiosingle   : true                      // --             (layout single line)
-    
-    , checkbox      : [ 'LABEL', ... ]          // ***
-                   // { LABEL: 'VALUE', ... }
-    , checkcolumn   : true                      // --             (layout 2 colums)
-    
-    , select        : { LABEL: 'VALUE', ... }   // ***
-                   // [ LABEL, ... ]            //                (option label = value)
-    , selectlabel   : 'LABEL'                   // --             (select input label)
-    
-    , rangelabel    : 'LABEL'                   // ***            (input range label)
-    , rangesub      : 'SUBLABEL'                // --             (sublabel under range)
-    
-    , order         : [ TYPE, ... ]             // (sequence)     (order of *** inputs)
-    
     , beforeshow    : FUNCTION                  // --             (function after values set)
     
     , filelabel     : 'LABEL'                   // ***            (browse button label)
