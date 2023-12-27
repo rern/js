@@ -39,7 +39,8 @@ info( {                                         // default
         , [ 'LABEL', 'select', { K: V }, 'UNIT' ]
     ]
 
-    , prompt        : 'HTML'                    // --             (hidden prompt)
+    , prompt        : 'HTML'                    // --             (hidden prompt - $( '#infoX' ).trigger( 'click' ) required for close)
+
     , footer        : 'FOOTER'                  // --             (footer above buttons)
     , footeralign   : 'CSS'                     // 'center'
 
