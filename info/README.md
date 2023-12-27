@@ -33,7 +33,7 @@ info( {                                         // default
     , list          : [
           [ 'LABEL', 'TYPE' ]                                     (password, textarea, range)
         , [ 'LABEL', 'TYPE', 'UNIT' ]                             (text, number)
-		, [ 'LABEL', 'TYPE', { step: N, min: N, max: N } ](number)
+        , [ 'LABEL', 'TYPE', { step: N, min: N, max: N } ](number)
         , [ 'LABEL', 'checkbox',         'td' ]                   (td - single line)
         , [ 'LABEL'  'radio',  { K: V }, 'br' ]                   (br - 1:1 line)
         , [ 'LABEL', 'select', { K: V }, 'UNIT' ]
