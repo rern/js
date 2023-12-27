@@ -39,6 +39,7 @@ info( {                                         // default
         , [ 'LABEL', 'select', { K: V }, 'UNIT' ]
     ]
 
+	, prompt        : 'HTML'                    // --             (hidden prompt)
     , footer        : 'FOOTER'                  // --             (footer above buttons)
     , footeralign   : 'CSS'                     // 'center'
 
