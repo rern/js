@@ -31,11 +31,12 @@ info( {                                         // default
     , messagealign  : 'CSS'                     // 'center'
 
     , list          : [
-          [ 'LABEL', 'TYPE' ]                   // password, textarea, range
-        , [ 'LABEL', 'TYPE',   'PLACEHOLDER' ]  // text, number
-        , [ 'LABEL', 'checkbox',         'td' ] // checkbox      (td - single line)
-        , [ '',      'radio',  { K: V }, 'br' ] // radio         (br - 1:1 line)
-        , [ 'LABEL', 'select', { K: V } ]       // select
+          [ 'LABEL', 'TYPE' ]                                     (password, textarea, range)
+        , [ 'LABEL', 'TYPE', 'UNIT' ]                             (text, number)
+		, [ 'LABEL', 'TYPE', 'updn', { step: N, min: N, max: N } ](number)
+        , [ 'LABEL', 'checkbox',         'td' ]                   (td - single line)
+        , [ 'LABEL'  'radio',  { K: V }, 'br' ]                   (br - 1:1 line)
+        , [ 'LABEL', 'select', { K: V }, 'UNIT' ]
     ]
 
     , footer        : 'FOOTER'                  // --             (footer above buttons)
