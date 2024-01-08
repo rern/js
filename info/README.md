@@ -30,12 +30,12 @@ info( {                                         // default
     , message       : 'MESSAGE'                 // --             (message under title)
     , messagealign  : 'CSS'                     // 'center'
 
-    , list          : [                                           (all[ 4 ] - colspan)
-          [ 'LABEL', 'TYPE' ]                                     (password, textarea, range)
-        , [ 'LABEL', 'TYPE',     'UNIT',   'td' ]                 (text, number)
-        , [ 'LABEL', 'TYPE',     { step: N, min: N, max: N } ]    (number with up/down buttons)
-        , [ 'LABEL', 'checkbox',           'td' ]                 (td - single line)
-        , [ 'LABEL'  'radio',    { K: V }, 'tr' ]                 (tr - 1:1 line)
+    , list          : [                                           // (all[ 4 ] - colspan)
+          [ 'LABEL', 'TYPE' ]                                     // (password, textarea, range)
+        , [ 'LABEL', 'TYPE',     'UNIT',   'td' ]                 // (text, number)
+        , [ 'LABEL', 'TYPE',     { step: N, min: N, max: N } ]    // (number with up/down buttons)
+        , [ 'LABEL', 'checkbox',           'td' ]                 // (td - single line)
+        , [ 'LABEL'  'radio',    { K: V }, 'tr' ]                 // (tr - 1:1 line)
         , [ 'LABEL', 'select',   { K: V }, 'UNIT' ]
     ]
 
