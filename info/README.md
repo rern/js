@@ -23,7 +23,6 @@ info( {                                         // default
     
     , content       : 'HTML'                    // ***            (custom html <table> input content)
     , height        : N                         // (fit)          (infocontent height)
-    , contentcssno  : true                      // --             (omit content css)
 
     , header        : 'HEADER'                  // --             (header above message)
     , headeralign   : 'CSS'                     // 'center'
@@ -37,7 +36,7 @@ info( {                                         // default
         , [ 'LABEL', 'checkbox',           'td' ]
         , [ 'LABEL'  'radio',    { K: V }, 'tr' ]
         , [ 'LABEL', 'select',   { K: V }, 'UNIT' ]
-    ]                                           // ('td'/'tr' - single/1:1 line, each[ 4 ] - colspan)
+    ]                                           // --             ('td'/'tr' - single/1:1 line, each[ 4 ] - colspan)
 
     , prompt        : 'HTML'                    // --             (hidden prompt - $( '#infoX' ).trigger( 'click' ) required for close)
 
