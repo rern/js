@@ -30,14 +30,14 @@ info( {                                         // default
     , message       : 'MESSAGE'                 // --             (message under title)
     , messagealign  : 'CSS'                     // 'center'
 
-    , list          : [                                           // (all[ 4 ] - colspan)
+    , list          : [
           [ 'LABEL', 'TYPE' ]                                     // (password, textarea, range)
         , [ 'LABEL', 'TYPE',     'UNIT',   'td' ]                 // (text, number)
         , [ 'LABEL', 'TYPE',     { step: N, min: N, max: N } ]    // (number with up/down buttons)
-        , [ 'LABEL', 'checkbox',           'td' ]                 // (td - single line)
-        , [ 'LABEL'  'radio',    { K: V }, 'tr' ]                 // (tr - 1:1 line)
+        , [ 'LABEL', 'checkbox',           'td' ]
+        , [ 'LABEL'  'radio',    { K: V }, 'tr' ]
         , [ 'LABEL', 'select',   { K: V }, 'UNIT' ]
-    ]
+    ]                                           // ('td'/'tr' - single/1:1 line, each[ 4 ] - colspan)
 
     , prompt        : 'HTML'                    // --             (hidden prompt - $( '#infoX' ).trigger( 'click' ) required for close)
 
