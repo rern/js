@@ -18,7 +18,7 @@ info( {                                        // default
     , title        : 'TITLE'                   // 'Information'  (top title)
     , width        : N                         // 400            (info width)
 
-	, json         : { KEY: 'VALUE', ... }     // --             (translate to each I.KEY = 'VALUE')
+	, keyvalue     : { KEY: 'VALUE', ... }     // --             (translate to each info KEY = 'VALUE')
     
     , tab          : [ FUNCTION, ... ]         // ***            (info() functions - blank for current)
     , tablabel     : [ 'LABEL', ... ]          // ***            (tabs for switch between multiple infos)
