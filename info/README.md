@@ -35,11 +35,11 @@ info( {                                        // default
           [ 'LABEL', 'TYPE', PARAM ]           // 'TYPE' - input        (''   = non-input)
         , [ 'LABEL'  'TYPE', PARAM/{ K: V } ]  // 'TYPE' - radio/select ({K: V} - no other PARAM keys)
     ]                                          // PARAM - {
-                                               //       kv       : { K: V, ... } (radio/select - label: values)
-                                               //     , colspan  : N          (default: radio=2)
+                                               //       kv       : { K: V, ... } (radio/select - options label: values)
+                                               //     , colspan  : N             (radio - default: =2)
                                                //     , disable  : true/false
-                                               //     , sameline : true/false (default: checkbox=false, radio=true)
-                                               //     , suffix   : SUFFIX     (non-input - string)
+                                               //     , sameline : true/false    (radio - default: true)
+                                               //     , suffix   : SUFFIX        (non-input - string at input column)
                                                //     , updn     : { step: N, min: N, max: N }
                                                // }
 
