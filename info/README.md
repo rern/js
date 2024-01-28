@@ -32,13 +32,16 @@ info( {                                        // default
     , messagealign : 'CSS'                     // 'center'
 
     , list         : [
-          [ 'LABEL', 'TYPE' ]                                     // (password, textarea, range)
-        , [ 'LABEL', 'TYPE',     'SUFFIX', 'td' ]                 // (text, number, '' non-input)
-        , [ 'LABEL', 'TYPE',     { step: N, min: N, max: N } ]    // (number with up/down buttons)
-        , [ 'LABEL', 'checkbox',           'td' ]
-        , [ 'LABEL'  'radio',    { K: V }, 'tr' ]
-        , [ 'LABEL', 'select',   { K: V }, 'UNIT' ]
-    ]                                          // --             ('td'/'tr' - single/1:1 line, each[ 4 ] - colspan)
+          [ 'LABEL', 'TYPE', PARAM ]           // 'TYPE' - input        (''   = non-input)
+        , [ 'LABEL'  'TYPE', PARAM/{ K: V } ]  // 'TYPE' - radio/select (K: V = label: value)
+    ]                                          // PARAM - {
+                                               //       kv       : { K: V, ... }
+                                               //     , colspan  : N   (default: radio=2)
+                                               //     , disable  : T/F
+                                               //     , sameline : T/F (default: checkbox=false, radio=true)
+                                               //     , suffix   : UNIT
+                                               //     , updn     : { step: N, min: N, max: N }
+                                               // }
 
     , prompt       : 'HTML'                    // --             (hidden prompt - $( '#infoX' ).trigger( 'click' ) required for close)
 
