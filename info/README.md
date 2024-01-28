@@ -33,13 +33,13 @@ info( {                                        // default
 
     , list         : [
           [ 'LABEL', 'TYPE', PARAM ]           // 'TYPE' - input        (''   = non-input)
-        , [ 'LABEL'  'TYPE', PARAM/{ K: V } ]  // 'TYPE' - radio/select (K: V = label: value)
+        , [ 'LABEL'  'TYPE', PARAM/{ K: V } ]  // 'TYPE' - radio/select ({K: V} - no other PARAM keys)
     ]                                          // PARAM - {
-                                               //       kv       : { K: V, ... }
-                                               //     , colspan  : N   (default: radio=2)
-                                               //     , disable  : T/F
-                                               //     , sameline : T/F (default: checkbox=false, radio=true)
-                                               //     , suffix   : UNIT
+                                               //       kv       : { K: V, ... } (radio/select - label: values)
+                                               //     , colspan  : N          (default: radio=2)
+                                               //     , disable  : true/false
+                                               //     , sameline : true/false (default: checkbox=false, radio=true)
+                                               //     , suffix   : SUFFIX     (non-input - string)
                                                //     , updn     : { step: N, min: N, max: N }
                                                // }
 
