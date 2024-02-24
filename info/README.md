@@ -38,6 +38,7 @@ info( {                                        // default
                                                //       kv       : { K: V, ... } (radio/select - options label: values)
                                                //     , colspan  : N             (radio - default: =2)
                                                //     , disable  : true/false
+                                               //     , nosort   : true/false
                                                //     , sameline : true/false    (radio - default: true)
                                                //     , suffix   : SUFFIX        (non-input - string at input column)
                                                //     , updn     : { step: N, min: N, max: N }
