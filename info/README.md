@@ -40,7 +40,7 @@ info( {                                        // default
                                                //     , nosort   : true/false
                                                //     , sameline : true/false    (radio - default: true)
                                                //     , suffix   : SUFFIX        (non-input - string at input column)
-                                               //     , updn     : { step: N, min: N, max: N, enable: TF }
+                                               //     , updn     : { step: N, min: N, max: N, enable: TF, link: TF }
                                                // }
 
     , prompt       : 'HTML'                    // --             (hidden prompt - $( '#infoX' ).trigger( 'click' ) required for close)
