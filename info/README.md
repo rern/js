@@ -43,8 +43,6 @@ info( {                                        // default
                                                //     , updn     : { step: N, min: N, max: N, enable: TF, link: TF }
                                                // }
 
-    , prompt       : 'HTML'                    // --             (hidden prompt - $( '#infoX' ).trigger( 'click' ) required for close)
-
     , footer       : 'FOOTER'                  // --             (footer above buttons)
     , footeralign  : 'CSS'                     // 'center'
 
