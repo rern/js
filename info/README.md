@@ -31,11 +31,11 @@ info( {                                        // default
     , message      : 'MESSAGE'                 // --             (message under title)
     , messagealign : 'CSS'                     // 'center'
 
-    , list         : [                         //                (simple single - list: [ 'LABEL', 'TYPE' ])
+    , list         : [                         //                (auto array if single input)
           [ 'LABEL', 'TYPE', PARAM ], ...      // 'TYPE'         (type '' = non-input) [checkbox, hidden, number, password, text]
     ]                                          // PARAM          (optional)
-                                               //     - simple - {K: V} [radio, select]
-                                               //     - option - {
+                                               //     > simple > {K: V} [radio, select]
+                                               //     > option > {
                                                //       kv       : {K: V, ...} (radio/select - options label: values)
                                                //     , colspan  : N             (radio - default: 2)
                                                //     , nosort   : boolean       [select]
