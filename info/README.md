@@ -32,11 +32,11 @@ info( {                                        // default
     , messagealign : 'CSS'                     // 'center'
 
     , list         : [
-          [ 'LABEL', 'TYPE' ]                  // 'TYPE'         (input type - ''   = non-input) [checkbox, hidden, number, password, text]
+          [ 'LABEL', 'TYPE' ]                  // 'TYPE'         (type '' = non-input) [checkbox, hidden, number, password, text]
         , [ 'LABEL'  'TYPE', { K: V }/PARAM ]  // PARAM          (optional)
     ]                                          //     - simple - {K: V} [radio, select]
                                                //     - option - {
-                                               //       kv       : { K: V, ... } (radio/select - options label: values)
+                                               //       kv       : {K: V, ...} (radio/select - options label: values)
                                                //     , colspan  : N             (radio - default: 2)
                                                //     , nosort   : boolean       [select]
                                                //     , sameline : boolean       (radio - default: true) [checkbox, radio]
