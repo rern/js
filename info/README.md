@@ -41,7 +41,7 @@ info( {                                        // default
                                                //     , nosort   : boolean       [select]
                                                //     , sameline : boolean       (radio - default: true) [checkbox, radio]
                                                //     , suffix   :'SUFFIX'       (non-input - string at input column) [number, text]
-                                               //     , updn     : { step: N, min: N, max: N, boolean, link: boolean } [number]
+                                               //     , updn     : { step: N, min: N, max: N, disabled: boolean, link: boolean } [number]
                                                //     , width    : N
                                                // }
 
