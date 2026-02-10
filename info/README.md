@@ -34,13 +34,14 @@ info( {                                        // default
     , list         : [
           [ 'LABEL', 'TYPE', PARAM ]           // 'TYPE' - input        (''   = non-input)
         , [ 'LABEL'  'TYPE', PARAM/{ K: V } ]  // 'TYPE' - radio/select ({K: V} - no other PARAM keys)
-    ]                                          // PARAM - {
+    ]                                          // PARAM  - {
                                                //       kv       : { K: V, ... } (radio/select - options label: values)
-                                               //     , colspan  : N             (radio - default: =2)
-                                               //     , nosort   : true/false
-                                               //     , sameline : true/false    (radio - default: true)
-                                               //     , suffix   : SUFFIX        (non-input - string at input column)
-                                               //     , updn     : { step: N, min: N, max: N, enable: TF, link: TF }
+                                               //     , colspan  : N             (radio - default: 2)
+                                               //     , nosort   : boolean       [select]
+                                               //     , sameline : boolean       (radio - default: true) [checkbox, radio]
+                                               //     , suffix   :'SUFFIX'       (non-input - string at input column) [number, text]
+                                               //     , updn     : { step: N, min: N, max: N, boolean, link: boolean } [number]
+                                               //     , width    : N
                                                // }
 
     , footer       : 'FOOTER'                  // --             (footer above buttons)
